@@ -15,7 +15,7 @@ Persist::usage = "Persist[name, body] persists body unevaluated under the given 
 and persists the EvaluatingCell this is called from. Finally it evaluates body"
 PersistDef::usage = "Saves only the body, not the cell, and evaluates it"
 
-paul`MakeUndefinedFunction /@ Unevaluated@{
+Global`MakeUndefinedFunction /@ Unevaluated@{
   PersistDef,Persist,
 DepersistHeldDef,
 DepersistDef,
@@ -72,21 +72,22 @@ DepersistHeldDef[name_String] := LoadExpression["def"<>name];
 DepersistCell[name_String] := LoadExpression["cell"<>name];
 
 Persist~SetAttributes~HoldRest;
-Persist[n_String, x_] := 
+Persist[n_String /; StringLength@n > 0, x_] :=
     With[{cell = EvaluatingCell[]},
     SaveExpression["cell" <> n, cell]; (* TODO should Cells be held, can they have evaluating variables? Well inside ToBoxes yes but otherwise?*)
     PersistDef[n, x]
 ];
-Persist[ns_Symbol, x_] :=  {n=FullSymbolName@Unevaluated@ns}~With~Persist[n,x]
+Persist[ns_Symbol, x_] :=  {n=(*FullSymbolName@*)ToString@Unevaluated@ns}~With~Persist[n,x]
 
-PersistDef[n_String, x_] := (SaveExpression["def" <> n, HoldComplete[x]];x);
+PersistDef~SetAttributes~HoldRest;
+PersistDef[n_String, x_] := (Assert[Not[n~StringStartsQ~"System`"]];SaveExpression["def" <> n, HoldComplete[x]];x);
 
 
 PersistedCells[] := Flatten@StringCases[SavedExpressions[], StartOfString~~"cell"~~name__ :> name];
     
 PersistedNames[] := Flatten@StringCases[SavedExpressions[], StartOfString~~"def"~~name__ :> name];
 
-PersistedNames[se_StringExpression] := Flatten[PersistedNames[]~StringCases~se];
+PersistedNames[se_StringExpression] := Flatten[PersistedNames[]~StringCases~(StartOfString~~se)];
 PersistedNames[s_String] := PersistedNames[s~~___]
 (* Usability: *)
 
@@ -103,7 +104,7 @@ DepersistCellPrint[s_Symbol] := {n=FullSymbolName@Unevaluated@s}~With~DepersistC
 
 DepersistCellPrint[name_String] := CellPrint@DepersistCell[name];
 
-DepersistCellPrint[se_StringExpression] := DepersistCellPrint /@ PersistedNames[se];
+DepersistCellPrint[se_StringExpression] := DepersistCellPrint ~Scan~ PersistedNames[se];
 
 Depersist[s_] := DepersistCellPrint@s;
 
