@@ -59,7 +59,15 @@ DepersistCellAll[] := DepersistCell /@ PersistedCells[];
 (* SavedExpressions *)
 toFileName@name_ := FileNameJoin@{$SavedExpressionsBase,name<>".m"}
 
-SaveExpression[name_String,e_]:=Block[{$Context = "unusedContext`", $ContextPath = {}},Put[e,toFileName@name]];(*mx not much faster and is not Gitable!*)
+
+SaveExpression[name_String,e_]:=Block[{$Context = "unusedContext`", $ContextPath = {}},
+    (*mx not much faster and is not Gitable!*)
+    (*Put[e,toFileName@name]*) (* does not deal with Format[] properly (evaluates it!) *)
+    Export[toFileName@name, FullForm@e, "String"]
+];
+
+
+
 LoadExpression[name_String]:=Get[toFileName@name];
 SavedExpressions[]:=FileBaseName/@FileNames["*",$SavedExpressionsBase]
 (* end of SavedExpressions, besides
@@ -83,11 +91,11 @@ PersistDef~SetAttributes~HoldRest;
 PersistDef[n_String, x_] := (Assert[Not[n~StringStartsQ~"System`"]];SaveExpression["def" <> n, HoldComplete[x]];x);
 
 
-PersistedCells[] := Flatten@StringCases[SavedExpressions[], StartOfString~~"cell"~~name__ :> name];
+PersistedCells[] := Flatten@StringCases[SavedExpressions[], StartOfString~~"cell"~~name__~~EndOfString :> name];
     
-PersistedNames[] := Flatten@StringCases[SavedExpressions[], StartOfString~~"def"~~name__ :> name];
+PersistedNames[] := Flatten@StringCases[SavedExpressions[], StartOfString~~"def"~~name__~~EndOfString :> name];
 
-PersistedNames[se_StringExpression] := Flatten[PersistedNames[]~StringCases~(StartOfString~~se)];
+PersistedNames[se_StringExpression] := Flatten[PersistedNames[]~StringCases~(StartOfString~~se~~ EndOfString)];
 PersistedNames[s_String] := PersistedNames[s~~___]
 (* Usability: *)
 

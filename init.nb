@@ -1,0 +1,537 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27929,        529]
+NotebookOptionsPosition[     27494,        510]
+NotebookOutlinePosition[     27835,        525]
+CellTagsIndexPosition[     27792,        522]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.6812430430614414`*^9, 3.6812430434989357`*^9}, {
+  3.681489308944558*^9, 3.6814893096656127`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"you", " ", "can", " ", "rerun", " ", "this"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"On", "@", "Assert"}], ";"}], "\n", 
+   RowBox[{"<<", "MathematicaOverloadings.m"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"<<", "Persist`"}], "\[IndentingNewLine]", 
+   RowBox[{"<<", "BoolEval`"}], "\[IndentingNewLine]", 
+   RowBox[{"<<", "GeneralUtilities`"}], "\[IndentingNewLine]", 
+   RowBox[{"<<", "SymbolicC`"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"other", " ", "packages", " ", "we", " ", "will", " ", "delay"}],
+      "-", "load"}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "requirements", " ", "for", " ", "even", " ", "the", " ", "simplest", " ", 
+     RowBox[{"definitions", ":"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<UnprotectClearAll\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<MakeUndefinedFunctionProtect\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", "Re", ")"}], "define", " ", "public", " ", "function", " ",
+       "and", " ", "dependencies"}], ",", " ", 
+     RowBox[{"can", " ", "load", " ", "in", " ", "any", " ", "order", " ", 
+      RowBox[{"(", 
+       RowBox[{
+       "definitions", " ", "themselves", " ", "depend", " ", "only", " ", 
+        "on", " ", "the", " ", "above", " ", "two"}]}]}]}], "*)"}], "\n", 
+   RowBox[{"DepersistDef", "@", "\"\<RedefinePublicFunction\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<DefinePublicFunction\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "DepersistDef", "@", 
+    "\"\<SyntaxInformationArgumentPatternForFixedArgumentCountRange\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<UnsetDownValueUsage\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<UnsetMatching\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<FindMatchingDownValues\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<UnsetHeldPattern\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "DepersistDef", "@", "\"\<CountArgumentsFromSyntaxInformation\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<CatchMessagesAndTypeCheck\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<MessageAssert\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<StringJoinTo\>\"", "~~", "___"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<LengthOrMissing\>\""}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "now", " ", "we", " ", "can", " ", "define", " ", "stuff", " ", "with", 
+      " ", "RedefinePublicFunction"}], ",", " ", 
+     RowBox[{"e", ".", "g", "."}]}], "*)"}], 
+   RowBox[{"DepersistDef", "@", "\"\<PRedefinePublicFunction\>\""}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<Omittable\>\""}], "\[IndentingNewLine]", 
+   RowBox[{
+   "DepersistDef", "@", "\"\<PRedefinePublicFunctionAlternatives\>\""}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<Contains\>\""}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<UnprotectRemove\>\""}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<PCounter\>\""}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<PCounterIncrease\>\""}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<PrintEcho\>\""}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<TestCount\>\""}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<TestCountIncrease\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{
+    "StartOfString", "~~", "\"\<PTest\>\"", "~~", "___", "~~", 
+     "EndOfString"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<TestDepersist\>\"", "~~", "___"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<TestRunAll\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<TestPersistedNames\>\""}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<StringJoinListable\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<FileNameJoinListable\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<IdentityArg\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<PersistRemove\>\""}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<FlatCoordinateBoundsArray\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<FixedPointReplaceRepeated\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<FixedPointReplace\>\""}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", "stuff", "*)"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "/@", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<AssertHeadChanges\>\"", ",", "\"\<GaussNewton\>\"", ",", 
+      "\"\<ProtectedSymbolAtoms\>\"", ",", "\"\<NumericVectorQ\>\"", ",", 
+      "\"\<MachineRealQ\>\"", ",", "\"\<PositionFunction\>\"", ",", 
+      "\"\<ForEach\>\"", ",", "\"\<UpdateRuleList\>\"", ",", 
+      "\"\<IsArrayAtLevel\>\"", ",", "\"\<SparseArrayQ\>\"", ",", 
+      "\"\<RuleMapIndexed\>\"", ",", "\"\<CIndex\>\"", ",", 
+      "\"\<EmptyListInputCell\>\"", ",", "\"\<FlattenNull\>\"", ",", 
+      "\"\<FirstLowerCaseQ\>\"", ",", "\"\<SymbolAtoms\>\"", ",", 
+      "\"\<AtomsMatching\>\"", ",", "\"\<Contains\>\"", ",", 
+      "\"\<WhichDownValue\>\"", ",", "\"\<WhichDownValueRule\>\"", ",", 
+      "\"\<EchoBeforeAfter\>\"", ",", "\"\<FullSymbolName\>\"", ",", 
+      "\"\<WhichDownValueAndPatternVariableValues\>\"", ",", 
+      "\"\<WhichPatternVariableValues\>\"", ",", "\"\<Positions\>\"", ",", 
+      "\"\<IdentityRule\>\"", ",", "\"\<AllEqual\>\"", ",", 
+      "\"\<PrintInputCell\>\"", ",", "\"\<MakeInputCell\>\"", ",", 
+      "\"\<ArrayInterleave\>\"", ",", "\"\<CommaSplit\>\"", ",", 
+      "\"\<PatternVariablesAppend$All\>\"", ",", "\"\<Append$IfMissing\>\"", 
+      ",", "\"\<PatternVariables\>\"", ",", 
+      "\"\<LowerCaseGlobalSymbolsUsedInSet\>\"", ",", 
+      "\"\<LowerCaseGlobalQ\>\"", ",", "\"\<UsedInSetQ\>\"", ",", 
+      "\"\<ApproximatelyEqual\>\"", ",", "\"\<Append$\>\""}], "}"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Off", "[", 
+    RowBox[{"GaussNewton", "::", "trace"}], "]"}], 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"don", "'"}], "t", " ", "need", " ", "this", " ", "usually"}], 
+     " ", "-", " ", 
+     RowBox[{
+     "TODO", " ", "automatically", " ", "disable", " ", "by", " ", "default", 
+      " ", 
+      RowBox[{"all", " ", "::", "trace"}]}], " ", "-", " ", 
+     RowBox[{"message", " ", 
+      RowBox[{"group", "?"}]}]}], "*)"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"former", " ", "paul`", " ", "stuff"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "/@", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<AllEqual\>\"", ",", "\"\<AllHeads\>\"", ",", "\"\<AllLessEqual\>\"",
+       ",", "\"\<AllValues\>\"", ",", "\"\<AnyImagePattern\>\"", ",", 
+      "\"\<ArrayAtLevelQ\>\"", ",", "\"\<ArrayDeinterleave\>\"", ",", 
+      "\"\<ArrayInterleave\>\"", ",", "\"\<ArrayQOp\>\"", ",", 
+      "\"\<AsynchronousEvaluate\>\"", ",", "\"\<AtomsMatching\>\"", ",", 
+      "\"\<BlockVV\>\"", ",", "\"\<BraceAndStringAwareCommaSplit\>\"", ",", 
+      "\"\<BraceAwareCommaSplit\>\"", ",", "\"\<BraceNestingDepth\>\"", ",", 
+      "\"\<CallWithUnevaluatedSymbol\>\"", ",", "\"\<CasesRepeated\>\"", ",", 
+      "\"\<CatchAllHandler\>\"", ",", "\"\<CharacterMap\>\"", ",", 
+      "\"\<ColumnVector\>\"", ",", "\"\<CommaRiffle\>\"", ",", 
+      "\"\<CommaSplitIfString\>\"", ",", "\"\<CommaSplit\>\"", ",", 
+      "\"\<Contains\>\"", ",", "\"\<ContainsQ\>\"", ",", 
+      "\"\<CrossProductMatrix\>\"", ",", "\"\<DataAdjust\>\"", ",", 
+      "\"\<DataAdjustSymmetric\>\"", ",", "\"\<DeleteIf\>\"", ",", 
+      "\"\<DeleteLastWhileItMatches\>\"", ",", "\"\<DeleteMembersOf\>\"", 
+      ",", "\"\<DeleteNonMembersOf\>\"", ",", "\"\<DeleteSequenceCases\>\"", 
+      ",", "\"\<DeleteUnless\>\"", ",", "\"\<Derivative1D\>\"", ",", 
+      "\"\<Derivative1Limit\>\"", ",", "\"\<Derivative1\>\"", ",", 
+      "\"\<DistanceTransformFull\>\"", ",", "\"\<DropSpace\>\"", ",", 
+      "\"\<EchoBeforeAfter\>\"", ",", 
+      "\"\<EchoUnevaluatedWithAbsoluteTiming\>\"", ",", 
+      "\"\<EchoWithAbsoluteTiming\>\"", ",", "\"\<EmptyListInputCell\>\"", 
+      ",", "\"\<EnsureList\>\"", ",", "\"\<EnsurePairs\>\"", ",", 
+      "\"\<EvaluatingCell\>\"", ",", "\"\<ExternalOutline\>\"", ",", 
+      "\"\<FileNameJoinListable\>\"", ",", "\"\<FindMatchingDownValues\>\"", 
+      ",", "\"\<FirstLowerCaseQ\>\"", ",", "\"\<FirstMost\>\"", ",", 
+      "\"\<FirstNonNull\>\"", ",", "\"\<FirstRest\>\"", ",", 
+      "\"\<FirstStringPosition\>\"", ",", "\"\<FixedPointReplace\>\"", ",", 
+      "\"\<FixedPointReplaceRepeated\>\"", ",", 
+      "\"\<FlatCoordinateBoundsArray\>\"", ",", "\"\<FlatIndexToPosition\>\"",
+       ",", "\"\<FlattenNull\>\"", ",", "\"\<FlattenOp\>\"", ",", 
+      "\"\<ForEach\>\"", ",", "\"\<FullNames\>\"", ",", 
+      "\"\<FullSymbolName\>\"", ",", "\"\<GeneralizedTranspose\>\"", ",", 
+      "\"\<GivesQ\>\"", ",", "\"\<HasAlphaChannel\>\"", ",", 
+      "\"\<HasDownValues\>\"", ",", "\"\<HasDuplicateQ\>\"", ",", 
+      "\"\<HasOwnValue\>\"", ",", "\"\<HeldAtomsMatching\>\"", ",", 
+      "\"\<HeldSymbolAtoms\>\"", ",", "\"\<IdentityArg\>\"", ",", 
+      "\"\<IdentityRule\>\"", ",", "\"\<ImageNormDifference\>\"", ",", 
+      "\"\<ImportObjVC\>\"", ",", "\"\<InsideQuotationIndicator\>\"", ",", 
+      "\"\<InternalOutline\>\"", ",", "\"\<InterpretationDynamic\>\"", ",", 
+      "\"\<IsArrayAtLevel\>\"", ",", "\"\<JoinTo\>\"", ",", 
+      "\"\<KeepMembersOf\>\"", ",", "\"\<LengthOrMissing\>\"", ",", 
+      "\"\<LengthQ\>\"", ",", "\"\<LetL\>\"", ",", 
+      "\"\<LinearListInterpolation\>\"", ",", "\"\<ListNormalVectorPlot\>\"", 
+      ",", "\"\<ListOfHoldToHold\>\"", ",", "\"\<LoadInputField2\>\"", ",", 
+      "\"\<MakeCodeCell\>\"", ",", "\"\<MakeFullFormString\>\"", ",", 
+      "\"\<MakeInputCell\>\"", ",", "\"\<MatchesQ\>\"", ",", 
+      "\"\<MatrixInterleave\>\"", ",", "\"\<MemoryBlock\>\"", ",", 
+      "\"\<MostLast\>\"", ",", "\"\<MSBuild\>\"", ",", 
+      "\"\<NearestFilter\>\"", ",", "\"\<NotebookAllDeleteCells\>\"", ",", 
+      "\"\<Omittable\>\"", ",", "\"\<OnCoordinateBoundsQ\>\"", ",", 
+      "\"\<ParallelSubmitFinishedQ\>\"", ",", "\"\<ParallelSubmitGet\>\"", 
+      ",", "\"\<ParallelSubmitPlaceholder\>\"", ",", 
+      "\"\<ParallelSubmitPlaceholderMultiple\>\"", ",", 
+      "\"\<ParseCStringSource\>\"", ",", "\"\<PartitionIntoSublists\>\"", 
+      ",", "\"\<PartitionRangeApproximately2DByLength\>\"", ",", 
+      "\"\<PartitionRangeApproximately2DSquare\>\"", ",", 
+      "\"\<PartitionRangeApproximatelyByLength\>\"", ",", 
+      "\"\<PartitionRangeApproximately\>\"", ",", "\"\<PlusMinusList\>\"", 
+      ",", "\"\<PositionFunction\>\"", ",", "\"\<Positions\>\"", ",", 
+      "\"\<PositionsOnLevel\>\"", ",", 
+      "\"\<PositionsToExpressionsOnLevel\>\"", ",", 
+      "\"\<PositionToFlatIndex\>\"", ",", "\"\<PrintInputCell\>\"", ",", 
+      "\"\<QueueRunTask\>\"", ",", "\"\<ReplaceAt\>\"", ",", 
+      "\"\<ReplaceLast\>\"", ",", "\"\<ReplaceMissing\>\"", ",", 
+      "\"\<ReplaceSequence\>\"", ",", "\"\<RotationMatrixAxisAngleVector\>\"",
+       ",", "\"\<RuleMapIndexed\>\"", ",", "\"\<RuleMap\>\"", ",", 
+      "\"\<RulesToFunction\>\"", ",", "\"\<RulesToVerbatimFunction2\>\"", 
+      ",", "\"\<RulesToVerbatimFunction\>\"", ",", 
+      "\"\<SeriesExtractDerivatives\>\"", ",", "\"\<ShowDistanceField3D\>\"", 
+      ",", "\"\<ShowDistanceField3DSlice\>\"", ",", 
+      "\"\<ShowDistanceField\>\"", ",", "\"\<SkewSymmetricMatrix3\>\"", ",", 
+      "\"\<SortMost\>\"", ",", "\"\<SparseArrayQ\>\"", ",", 
+      "\"\<SplitAtFirst\>\"", ",", "\"\<StrictlyBetween\>\"", ",", 
+      "\"\<StrictlyWithinCoordinateBoundsQ\>\"", ",", 
+      "\"\<StringEndsWith\>\"", ",", "\"\<StringFirstBracePairContents\>\"", 
+      ",", "\"\<StringJoinListable\>\"", ",", "\"\<StringJoinTo\>\"", ",", 
+      "\"\<StringJoinToOrSet\>\"", ",", "\"\<StringRiffleOp\>\"", ",", 
+      "\"\<StringSelect\>\"", ",", "\"\<StringSplitAt\>\"", ",", 
+      "\"\<StringSplitOp\>\"", ",", "\"\<SymbolAtoms\>\"", ",", 
+      "\"\<SymmetricMinMax\>\"", ",", "\"\<TaskKill\>\"", ",", 
+      "\"\<ToInnerCoordinateBounds\>\"", ",", 
+      "\"\<TokenizeNestedBracePairs\>\"", ",", "\"\<UnprotectClearAll\>\"", 
+      ",", "\"\<UnprotectRemove\>\"", ",", "\"\<UnsetHeldPattern\>\"", ",", 
+      "\"\<UnsetMatching\>\"", ",", "\"\<UpdateRuleList\>\"", ",", 
+      "\"\<WhichDownValue\>\"", ",", "\"\<WhichDownValueRule\>\"", ",", 
+      "\"\<WithinCoordinateBoundsQ\>\"", ",", "\"\<NumericHeadsQ\>\"", ",", 
+      "\"\<SymbolicHead\>\"", ",", "\"\<NestedHeadsQ\>\"", ",", 
+      "\"\<Subexpressions\>\"", ",", "\"\<DropCContexts\>\"", ",", 
+      "\"\<Norm2\>\"", ",", "\"\<ConvertEquationsToLeastSquares\>\"", ",", 
+      "\"\<CoordinateBoundsQ\>\"", ",", "\"\<NumericMatrixQ\>\"", ",", 
+      "\"\<ProtectedQ\>\"", ",", "\"\<HasAttributeQ\>\"", ",", 
+      "\"\<SameSetQ\>\"", ",", "\"\<NumericTensorQ\>\"", ",", 
+      "\"\<MakeHoldAllCompleteHead\>\"", ",", 
+      "\"\<ReleaseHoldAssociation\>\"", ",", "\"\<ExtractSingleElement\>\""}],
+      "}"}]}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"end", " ", "of", " ", "stuff"}], "*)"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "DepersistDef", "[", "\"\<TestingNotebookHeldVerificationTests\>\"", "]"}],
+    "\[IndentingNewLine]", "\n", "\n", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"StartOfString", "~~", "\"\<FiniteMapping\>\"", "~~", 
+     RowBox[{
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], "..."}], "~~", 
+     "EndOfString"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"StartOfString", "~~", "\"\<FM\>\"", "~~", 
+     RowBox[{
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], "..."}], "~~", 
+     "EndOfString"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<RVarval\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<RVarval\>\"", "~~", "__"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<RVV\>\"", "~~", "__"}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<GridData\>\"", "~~", 
+     RowBox[{
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], "..."}]}], "]"}], 
+   RowBox[{"(*", 
+    RowBox[{
+    "must", " ", "be", " ", "loaded", " ", "first", " ", "because", " ", 
+     "other", " ", "definitions", " ", "rely", " ", "on", " ", "this", " ", 
+     "not", " ", "crashing", " ", "with", " ", "any", " ", "arguments"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<GD\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<RIFunction\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<RIFunction\>\"", "~~", 
+     RowBox[{
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], ".."}]}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<CForm\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<Cform\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<DropCContexts\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "@", "\"\<CIdentifierCharacter\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<SymbolicCForm\>\"", "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<SceneX\>\"", "~~", 
+     RowBox[{
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], ".."}]}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<Scene2D\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<Scene3D\>\"", "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<Scene\>\"", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<Vsfs2d\>\"", "~~", "__"}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<Scene2D\>\"", "~~", 
+     RowBox[{
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], ".."}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<Scene3D\>\"", "~~", 
+     RowBox[{
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], ".."}]}], "]"}], 
+   "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<SparseOptimizationProblem\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "DepersistDef", "[", "\"\<SparseOptimizationProblemDecomposed\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<SOPCompiledEnsureUninstalled\>\"", "]"}],
+    "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<SOPCompiled\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<SparseOptimizationProblem\>\"", "~~", 
+     RowBox[{
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], "..."}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<SOP\>\"", "~~", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Except", "[", "\"\<`\>\"", "]"}], ".."}], ")"}]}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "/@", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+     "\"\<CTypePattern\>\"", ",", "\"\<CDeclareAssign\>\"", ",", 
+      "\"\<CFunctionCallSelf\>\"", ",", "\"\<FlatCBlock\>\"", ",", 
+      "\"\<WrapInBlockIfNeeded\>\"", ",", "\"\<PrintPTest\>\"", ",", 
+      "\"\<CanonicalizeSplitCArgument\>\"", ",", 
+      "\"\<CanonicalizeSplitCType\>\"", ",", "\"\<ShiftUpConst\>\""}], 
+     "\[IndentingNewLine]", "}"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6816357205273657`*^9, 3.681635764381112*^9}, {
+   3.681635859727148*^9, 3.68163587600146*^9}, 3.681635933620405*^9, {
+   3.681635986072893*^9, 3.6816359917679806`*^9}, 3.681636216294277*^9, {
+   3.681636986264518*^9, 3.6816369958154593`*^9}, {3.6816370270073814`*^9, 
+   3.681637034379568*^9}, {3.681637837577274*^9, 3.681637839774016*^9}, {
+   3.6816379903089423`*^9, 3.681637995718711*^9}, {3.681638583908002*^9, 
+   3.6816385851965957`*^9}, {3.681639150204962*^9, 3.6816391544192247`*^9}, {
+   3.6816392805126224`*^9, 3.6816393016089745`*^9}, {3.6816393341946383`*^9, 
+   3.6816393479668465`*^9}, {3.681639389759025*^9, 3.6816394164523277`*^9}, {
+   3.681639898225791*^9, 3.681639905629013*^9}, {3.6816402082658215`*^9, 
+   3.6816402125271416`*^9}, {3.6816404974368205`*^9, 3.681640500797015*^9}, 
+   3.6816406780563755`*^9, {3.681640836057623*^9, 3.681640841113935*^9}, {
+   3.6816454124016933`*^9, 3.6816454170014353`*^9}, {3.681648818404197*^9, 
+   3.681648832295534*^9}, {3.68164997264914*^9, 3.68164997328395*^9}, {
+   3.681650023593755*^9, 3.6816500534230337`*^9}, {3.6816556474576244`*^9, 
+   3.681655659263363*^9}, {3.68165659718427*^9, 3.681656616061822*^9}, {
+   3.681656764062601*^9, 3.681656792527137*^9}, {3.6816569553473835`*^9, 
+   3.681656964614974*^9}, {3.681657704326418*^9, 3.681657708906137*^9}, {
+   3.6816581823611965`*^9, 3.6816581840252705`*^9}, {3.681658235021935*^9, 
+   3.6816582351180534`*^9}, {3.681658271386326*^9, 3.6816582729212465`*^9}, {
+   3.681659105427544*^9, 3.6816591254555287`*^9}, {3.681659297252017*^9, 
+   3.6816592973371243`*^9}, {3.6816593911021595`*^9, 3.681659400891396*^9}, {
+   3.6816595697542024`*^9, 3.6816595711919985`*^9}, {3.681660839981948*^9, 
+   3.681660864020956*^9}, {3.6816621609760475`*^9, 3.681662165972309*^9}, {
+   3.681663436981018*^9, 3.6816634381785135`*^9}, {3.6816636612730207`*^9, 
+   3.6816636625976777`*^9}, {3.681664041445627*^9, 3.681664053835092*^9}, {
+   3.6816685892280416`*^9, 3.6816685906988754`*^9}, {3.6816689362662644`*^9, 
+   3.681668939488287*^9}, {3.6816691680125914`*^9, 3.681669181936958*^9}, {
+   3.681672090356409*^9, 3.6816720975910482`*^9}, {3.6816722002463856`*^9, 
+   3.681672201605806*^9}, {3.681672594828332*^9, 3.68167259589122*^9}, {
+   3.6816726269274054`*^9, 3.6816726288025045`*^9}, {3.6816727732935076`*^9, 
+   3.681672778934369*^9}, {3.681673350714594*^9, 3.681673351230189*^9}, {
+   3.6816735223638787`*^9, 3.681673560591084*^9}, {3.6816736741246805`*^9, 
+   3.6816737047097187`*^9}, {3.681674015418338*^9, 3.6816740221217213`*^9}, {
+   3.681675781885372*^9, 3.6816757836822767`*^9}, {3.6816846859183826`*^9, 
+   3.6816847481008177`*^9}, {3.6816848070335417`*^9, 
+   3.6816848611024866`*^9}, {3.6817172668865547`*^9, 
+   3.6817172683923206`*^9}, {3.68171742218646*^9, 3.681717438098363*^9}, {
+   3.681717938552406*^9, 3.6817179398025074`*^9}, {3.681718750864328*^9, 
+   3.681718751208063*^9}, {3.6817198616411715`*^9, 3.68171987957806*^9}, {
+   3.6817199159751887`*^9, 3.681719921613628*^9}, {3.6817199669318748`*^9, 
+   3.6817199918869476`*^9}, {3.6817206029938593`*^9, 
+   3.6817206059196167`*^9}, {3.681722477178521*^9, 3.6817224843928776`*^9}, {
+   3.681724793579057*^9, 3.6817248013018007`*^9}, {3.6817261530774927`*^9, 
+   3.6817261540841117`*^9}, {3.6817262737271395`*^9, 3.681726277659649*^9}, {
+   3.681730666176879*^9, 3.68173066819242*^9}, {3.6817414400583563`*^9, 
+   3.681741449014554*^9}, {3.681743805910054*^9, 3.6817438118304543`*^9}, {
+   3.6817438552935076`*^9, 3.681743855668479*^9}, {3.681743932394699*^9, 
+   3.6817439335255375`*^9}, {3.681745563938382*^9, 3.6817456258401637`*^9}, {
+   3.6817460105110893`*^9, 3.681746013261185*^9}, {3.681746378545253*^9, 
+   3.681746397653382*^9}, {3.681746876731779*^9, 3.6817468797501273`*^9}, 
+   3.681747026386923*^9, {3.681747831558002*^9, 3.6817478325267887`*^9}, {
+   3.6817479505470943`*^9, 3.681747950609598*^9}, {3.681748452395944*^9, 
+   3.681748453224127*^9}, {3.6817490257392044`*^9, 3.681749043246077*^9}, 
+   3.6817493038377523`*^9, {3.681752197266246*^9, 3.6817522006163187`*^9}, {
+   3.681752431950218*^9, 3.6817524320439568`*^9}, {3.6817552950244303`*^9, 
+   3.6817552962100344`*^9}, {3.681755486156605*^9, 3.6817554908751745`*^9}, {
+   3.681756995597635*^9, 3.681756997296635*^9}, {3.681757038687112*^9, 
+   3.6817570406957607`*^9}, {3.6817571273112307`*^9, 3.681757151602639*^9}, {
+   3.6817601279899893`*^9, 3.681760161863283*^9}, {3.6817625291561985`*^9, 
+   3.6817625313822136`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.681746383639844*^9, 3.68174651734101*^9, {3.6817466158536015`*^9, 
+   3.6817466380132413`*^9}, 3.681747342261134*^9, 3.681748775430663*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.681746383639844*^9, 3.68174651734101*^9, {3.6817466158536015`*^9, 
+   3.6817466380132413`*^9}, 3.681747342261134*^9, 3.68174877996419*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.681746383639844*^9, 3.68174651734101*^9, {3.6817466158536015`*^9, 
+   3.6817466380132413`*^9}, 3.681747342261134*^9, 3.68174878680612*^9}]
+}, Open  ]]
+},
+WindowSize->{869, 1021},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 151, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[734, 26, 23118, 419, 3018, "Input"],
+Cell[23855, 447, 712, 12, 50, "Output"],
+Cell[24570, 461, 2605, 37, 202, "Output"],
+Cell[27178, 500, 300, 7, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+
