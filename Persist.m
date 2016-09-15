@@ -63,6 +63,7 @@ toFileName@name_ := FileNameJoin@{$SavedExpressionsBase,name<>".m"}
 SaveExpression[name_String,e_]:=Block[{$Context = "unusedContext`", $ContextPath = {}},
     (*mx not much faster and is not Gitable!*)
     (*Put[e,toFileName@name]*) (* does not deal with Format[] properly (evaluates it!) *)
+    Print[SaveExpression,": ", name];
     Export[toFileName@name, FullForm@e, "String"]
 ];
 

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     27929,        529]
-NotebookOptionsPosition[     27494,        510]
-NotebookOutlinePosition[     27835,        525]
-CellTagsIndexPosition[     27792,        522]
+NotebookDataLength[     28243,        526]
+NotebookOptionsPosition[     27965,        512]
+NotebookOutlinePosition[     28306,        527]
+CellTagsIndexPosition[     28263,        524]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,8 +21,6 @@ Notebook[{
 Cell[BoxData["Quit"], "Input",
  CellChangeTimes->{{3.6812430430614414`*^9, 3.6812430434989357`*^9}, {
   3.681489308944558*^9, 3.6814893096656127`*^9}}],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -121,6 +119,9 @@ Cell[BoxData[
     RowBox[{"\"\<TestRunAll\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "@", "\"\<TestPersistedNames\>\""}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<RecordExpression\>\"", "~~", "___"}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "@", "\"\<StringJoinListable\>\""}], 
    "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "@", "\"\<FileNameJoinListable\>\""}], 
@@ -140,7 +141,10 @@ Cell[BoxData[
    RowBox[{"DepersistDef", "/@", 
     RowBox[{"{", 
      RowBox[{
-     "\"\<AssertHeadChanges\>\"", ",", "\"\<GaussNewton\>\"", ",", 
+     "\"\<GlobalUppercaseSymbolsWithDownValuesContaining\>\"", ",", 
+      "\"\<GlobalUppercaseSymbols\>\"", ",", "\"\<IdentityOnFailure\>\"", 
+      ",", "\"\<FastShallow\>\"", ",", "\"\<AbsoluteTimingOnly\>\"", ",", 
+      "\"\<AssertHeadChanges\>\"", ",", "\"\<GaussNewton\>\"", ",", 
       "\"\<ProtectedSymbolAtoms\>\"", ",", "\"\<NumericVectorQ\>\"", ",", 
       "\"\<MachineRealQ\>\"", ",", "\"\<PositionFunction\>\"", ",", 
       "\"\<ForEach\>\"", ",", "\"\<UpdateRuleList\>\"", ",", 
@@ -377,12 +381,50 @@ Cell[BoxData[
    RowBox[{"DepersistDef", "/@", 
     RowBox[{"{", "\[IndentingNewLine]", 
      RowBox[{
-     "\"\<CTypePattern\>\"", ",", "\"\<CDeclareAssign\>\"", ",", 
+     "\"\<MakeSymbolWithSameAttributes\>\"", ",", 
+      "\"\<ReplaceHeadWithSameAttributes\>\"", ",", "\"\<PoseMatrixQ\>\"", 
+      ",", "\"\<CTypePattern\>\"", ",", "\"\<CDeclareAssign\>\"", ",", 
       "\"\<CFunctionCallSelf\>\"", ",", "\"\<FlatCBlock\>\"", ",", 
       "\"\<WrapInBlockIfNeeded\>\"", ",", "\"\<PrintPTest\>\"", ",", 
       "\"\<CanonicalizeSplitCArgument\>\"", ",", 
-      "\"\<CanonicalizeSplitCType\>\"", ",", "\"\<ShiftUpConst\>\""}], 
-     "\[IndentingNewLine]", "}"}]}]}]}]], "Input",
+      "\"\<CanonicalizeSplitCType\>\"", ",", "\"\<ShiftUpConst\>\"", ",", 
+      "\"\<CIndexToListIndex\>\"", ",", "\"\<AllApproximatelyEqual\>\"", ",", 
+      "\"\<AssertNull\>\"", ",", "\"\<HeldOptional\>\""}], 
+     "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"infini", " ", "tam"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", "\"\<DepthImage\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"___", "~~", "\"\<Pattern\>\"", "~~", "___"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<Nameless\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<RGBD\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<CreateRGBD\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<InfiniTAMScene\>\"", "~~", "___"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<InfiniTAM\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "/@", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"\"\<ShowPoseMatrices\>\"", ",", 
+      RowBox[{"\"\<PoseMatrix\>\"", "~~", "___"}], ",", 
+      RowBox[{"\"\<LineFrameFor\>\"", "~~", "___"}], ",", 
+      "\"\<ListAnimateManipulate\>\"", ",", 
+      RowBox[{"\"\<Graphics3D\>\"", "~~", "___"}], ",", 
+      "\"\<ShowEdgelessMeshWithCameraAt\>\"", ",", 
+      "\"\<LineFrameForPoseMatrix\>\"", ",", "\"\<HeadChangesQ\>\"", ",", 
+      "\"\<ShowMeshDiffuse\>\"", ",", "\"\<SNormQ\>\"", ",", "\"\<UNormQ\>\"",
+       ",", "\"\<FlatArrayReshape\>\"", ",", "\"\<BreakInto\>\"", ",", 
+      "\"\<ShowDistanceField3D\>\"", ",", "\"\<CoordinateListErosion\>\"", 
+      ",", "\"\<CoordinateRectangularNeighborhood\>\"", ",", 
+      "\"\<AllLessEqual\>\""}], "\[IndentingNewLine]", "}"}]}]}]}]], "Input",
  CellChangeTimes->{{3.6816357205273657`*^9, 3.681635764381112*^9}, {
    3.681635859727148*^9, 3.68163587600146*^9}, 3.681635933620405*^9, {
    3.681635986072893*^9, 3.6816359917679806`*^9}, 3.681636216294277*^9, {
@@ -443,73 +485,33 @@ Cell[BoxData[
    3.681756995597635*^9, 3.681756997296635*^9}, {3.681757038687112*^9, 
    3.6817570406957607`*^9}, {3.6817571273112307`*^9, 3.681757151602639*^9}, {
    3.6817601279899893`*^9, 3.681760161863283*^9}, {3.6817625291561985`*^9, 
-   3.6817625313822136`*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null"}], "}"}]], "Output",
- CellChangeTimes->{
-  3.681746383639844*^9, 3.68174651734101*^9, {3.6817466158536015`*^9, 
-   3.6817466380132413`*^9}, 3.681747342261134*^9, 3.681748775430663*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null"}], "}"}]], "Output",
- CellChangeTimes->{
-  3.681746383639844*^9, 3.68174651734101*^9, {3.6817466158536015`*^9, 
-   3.6817466380132413`*^9}, 3.681747342261134*^9, 3.68174877996419*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
-  "}"}]], "Output",
- CellChangeTimes->{
-  3.681746383639844*^9, 3.68174651734101*^9, {3.6817466158536015`*^9, 
-   3.6817466380132413`*^9}, 3.681747342261134*^9, 3.68174878680612*^9}]
-}, Open  ]]
+   3.6817625313822136`*^9}, {3.681767297407669*^9, 3.681767299667529*^9}, {
+   3.6817680782595406`*^9, 3.681768079427969*^9}, {3.68180563591049*^9, 
+   3.681805641234788*^9}, {3.6818057080788097`*^9, 3.6818057098601575`*^9}, {
+   3.6818085061773577`*^9, 3.6818085072555475`*^9}, {3.6818152134368935`*^9, 
+   3.681815214878497*^9}, {3.6818154436432476`*^9, 3.681815444805537*^9}, {
+   3.681816811169876*^9, 3.681816812857461*^9}, {3.681818866986805*^9, 
+   3.6818188689512544`*^9}, {3.681818937444763*^9, 3.6818189669165545`*^9}, {
+   3.681819041604779*^9, 3.6818190570620914`*^9}, {3.681821525043098*^9, 
+   3.6818215264288273`*^9}, {3.6827530817066493`*^9, 3.682753085415985*^9}, {
+   3.682761189323459*^9, 3.682761204561778*^9}, {3.68276379695529*^9, 
+   3.682763801286378*^9}, {3.682764209106676*^9, 3.6827642139037304`*^9}, {
+   3.6827643808482027`*^9, 3.6827643890204124`*^9}, {3.6827670896444063`*^9, 
+   3.682767128021001*^9}, {3.6827674772549257`*^9, 3.6827674827395477`*^9}, {
+   3.6827686622113967`*^9, 3.6827687064556313`*^9}, 3.6827712266808586`*^9, {
+   3.682772517909835*^9, 3.6827725187809267`*^9}, {3.6827727447079525`*^9, 
+   3.6827727514513702`*^9}, {3.6827728033441534`*^9, 
+   3.6827728044715605`*^9}, {3.6827763452568474`*^9, 
+   3.6827763796958413`*^9}, {3.682776472161275*^9, 3.6827764725788126`*^9}, {
+   3.682781022600454*^9, 3.6827810246860576`*^9}, {3.6827815062171974`*^9, 
+   3.682781512922568*^9}, {3.682784683089178*^9, 3.682784689644362*^9}, {
+   3.682785450855651*^9, 3.682785452556775*^9}, {3.6829195057020493`*^9, 
+   3.6829195166607313`*^9}, {3.6829208741293683`*^9, 3.682920874396721*^9}, {
+   3.68292546433676*^9, 3.6829254725369825`*^9}, {3.6829274581538115`*^9, 
+   3.6829274598619585`*^9}}]
 },
-WindowSize->{869, 1021},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{944, 1021},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -525,12 +527,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 151, 2, 30, "Input"],
-Cell[CellGroupData[{
-Cell[734, 26, 23118, 419, 3018, "Input"],
-Cell[23855, 447, 712, 12, 50, "Output"],
-Cell[24570, 461, 2605, 37, 202, "Output"],
-Cell[27178, 500, 300, 7, 30, "Output"]
-}, Open  ]]
+Cell[712, 24, 27249, 486, 3360, "Input"]
 }
 ]
 *)
