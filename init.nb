@@ -10,18 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     28243,        526]
-NotebookOptionsPosition[     27965,        512]
-NotebookOutlinePosition[     28306,        527]
-CellTagsIndexPosition[     28263,        524]
+NotebookDataLength[     36264,        667]
+NotebookOptionsPosition[     35739,        646]
+NotebookOutlinePosition[     36082,        661]
+CellTagsIndexPosition[     36039,        658]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData["Quit"], "Input",
- CellChangeTimes->{{3.6812430430614414`*^9, 3.6812430434989357`*^9}, {
-  3.681489308944558*^9, 3.6814893096656127`*^9}}],
 
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
@@ -47,7 +45,7 @@ Cell[BoxData[
    RowBox[{"DepersistDef", "@", "\"\<UnprotectClearAll\>\""}], 
    "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "@", "\"\<MakeUndefinedFunctionProtect\>\""}], 
-   "\[IndentingNewLine]", 
+   "\n", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{
@@ -57,7 +55,8 @@ Cell[BoxData[
       RowBox[{"(", 
        RowBox[{
        "definitions", " ", "themselves", " ", "depend", " ", "only", " ", 
-        "on", " ", "the", " ", "above", " ", "two"}]}]}]}], "*)"}], "\n", 
+        "on", " ", "the", " ", "above", " ", "two"}]}]}]}], "*)"}], 
+   "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "@", "\"\<RedefinePublicFunction\>\""}], 
    "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "@", "\"\<DefinePublicFunction\>\""}], 
@@ -424,7 +423,25 @@ Cell[BoxData[
        ",", "\"\<FlatArrayReshape\>\"", ",", "\"\<BreakInto\>\"", ",", 
       "\"\<ShowDistanceField3D\>\"", ",", "\"\<CoordinateListErosion\>\"", 
       ",", "\"\<CoordinateRectangularNeighborhood\>\"", ",", 
-      "\"\<AllLessEqual\>\""}], "\[IndentingNewLine]", "}"}]}]}]}]], "Input",
+      "\"\<AllLessEqual\>\"", ",", "\"\<CoordinateBoundsAddAll\>\"", ",", 
+      "\"\<LevelOp\>\"", ",", "\"\<CoordinatesAddAll\>\"", ",", 
+      "\"\<CoordinateBoundsSize\>\"", ",", "\"\<QuietCheck\>\"", ",", 
+      "\"\<CheckMissing\>\"", ",", "\"\<CoordinateBoundsMin\>\"", ",", 
+      "\"\<CoordinateBoundsMax\>\"", ",", "\"\<MemberQFunction\>\"", ",", 
+      "\"\<LyapunovEquation\>\"", ",", "\"\<PartitionOp\>\"", ",", 
+      "\"\<RGBSubpixelImage\>\"", ",", "\"\<RGBImageFilter\>\"", ",", 
+      "\"\<AllLess\>\"", ",", 
+      "\"\<PartitionRangeApproximately3DByLengthFlat\>\"", ",", 
+      "\"\<PartitionRangeApproximately3DByLength\>\"", ",", 
+      "\"\<VerificationTestOutcome\>\"", ",", "\"\<FlattenLevel\>\"", ",", 
+      "\"\<PartitionRangeApproximately2DByLengthFlat\>\"", ",", 
+      "\"\<PartitionRangeApproximately2DByLength\>\"", ",", 
+      "\"\<StringLines\>\"", ",", "\"\<TrimmedCommaSplit\>\"", ",", 
+      "\"\<FirstLast\>\"", ",", "\"\<EvaluateOwnValuesOnlyAndHold\>\""}], 
+     "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"DepersistDef", "[", 
+    RowBox[{"\"\<EProver\>\"", "~~", "___"}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.6816357205273657`*^9, 3.681635764381112*^9}, {
    3.681635859727148*^9, 3.68163587600146*^9}, 3.681635933620405*^9, {
    3.681635986072893*^9, 3.6816359917679806`*^9}, 3.681636216294277*^9, {
@@ -508,10 +525,127 @@ Cell[BoxData[
    3.682785450855651*^9, 3.682785452556775*^9}, {3.6829195057020493`*^9, 
    3.6829195166607313`*^9}, {3.6829208741293683`*^9, 3.682920874396721*^9}, {
    3.68292546433676*^9, 3.6829254725369825`*^9}, {3.6829274581538115`*^9, 
-   3.6829274598619585`*^9}}]
+   3.6829274598619585`*^9}, {3.6829446393753633`*^9, 3.682944640341589*^9}, {
+   3.682945142071944*^9, 3.6829451430191092`*^9}, {3.68295245366661*^9, 
+   3.6829524581843467`*^9}, {3.683294233743337*^9, 3.6832942348485336`*^9}, {
+   3.6832971332452497`*^9, 3.6832971359182367`*^9}, {3.683297425373711*^9, 
+   3.683297426277914*^9}, {3.6832979903863173`*^9, 3.6832980207319736`*^9}, {
+   3.6833009970933466`*^9, 3.683300998028632*^9}, {3.6833010506414323`*^9, 
+   3.6833010543599367`*^9}, {3.6833081352610016`*^9, 
+   3.6833081362934895`*^9}, {3.6833093393195963`*^9, 3.683309341059744*^9}, {
+   3.6833093961685658`*^9, 3.6833094029550915`*^9}, {3.683323748846813*^9, 
+   3.6833237497720585`*^9}, {3.68332400285896*^9, 3.6833240070591617`*^9}, {
+   3.6833262549964757`*^9, 3.6833262558871512`*^9}, {3.683327318949199*^9, 
+   3.6833273200742455`*^9}, {3.6833566973981886`*^9, 3.6833566984294806`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
+  3.6832834731702175`*^9, 3.68329802337181*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
+  3.6832834731702175`*^9, 3.6832980262938566`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
+  3.6832834731702175`*^9, 3.6832980361588135`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NoOwnValues","msg",
+   "\"Cannot set \\!\\(\\*RowBox[{\\\"$CreateSymbolPattern\\\", \\\"=\\\", \
+RowBox[{\\\"InterpretationBox\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"DynamicBox\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ToBoxes\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Refresh\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"Style\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"Mouseover\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"Pattern\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"paul`FullSymbolName\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\
+\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\"]\\\"}], \
+\\\",\\\", \\\"Underlined\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"UpdateInterval\\\", \\\"\[Rule]\\\", \\\"_\\\"}]}], \\\"]\\\"}], \
+\\\",\\\", \\\"StandardForm\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"ImageSizeCache\\\", \\\"\[Rule]\\\", \\\"_\\\"}]}], \\\"]\\\"}], \
+\\\",\\\", \\\"sym_\\\"}], \\\"]\\\"}]}]\\). \
+\\!\\(\\*RowBox[{\\\"$CreateSymbolPattern\\\"}]\\) cannot have \
+OwnValues.\\n\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"DepersistDef\\\", \
+\\\",\\\", \\\"DepersistDef\\\", \\\",\\\", \\\"MessageAbort\\\"}], \
+\\\"}\\\"}]\\)\"",2,555,48,25645235802586647566,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6830038078210363`*^9, 3.6832834469034753`*^9, 
+  3.6832834849345474`*^9, 3.683298036361968*^9}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
+  3.6832834731702175`*^9, 3.683298036377591*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
+   "Null", ",", "Null", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
+  3.6832834731702175`*^9, 3.6832980390588765`*^9}]
+}, Open  ]]
 },
-WindowSize->{944, 1021},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{784, 841},
+WindowMargins->{{Automatic, 453}, {Automatic, 21}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -526,8 +660,15 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 151, 2, 30, "Input"],
-Cell[712, 24, 27249, 486, 3360, "Input"]
+Cell[CellGroupData[{
+Cell[580, 22, 29256, 516, 7615, "Input"],
+Cell[29839, 540, 773, 13, 162, "Output"],
+Cell[30615, 555, 2588, 37, 597, "Output"],
+Cell[33206, 594, 392, 8, 75, "Output"],
+Cell[33601, 604, 1452, 24, 95, "Message"],
+Cell[35056, 630, 150, 2, 30, "Output"],
+Cell[35209, 634, 514, 9, 50, "Output"]
+}, Open  ]]
 }
 ]
 *)
