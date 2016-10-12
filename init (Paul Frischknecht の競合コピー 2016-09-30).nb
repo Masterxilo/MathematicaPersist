@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38099,        690]
-NotebookOptionsPosition[     37613,        670]
-NotebookOutlinePosition[     37957,        685]
-CellTagsIndexPosition[     37914,        682]
+NotebookDataLength[     37410,        687]
+NotebookOptionsPosition[     36803,        664]
+NotebookOutlinePosition[     37145,        679]
+CellTagsIndexPosition[     37102,        676]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -278,15 +278,14 @@ Cell[BoxData[
       "\"\<ProtectedQ\>\"", ",", "\"\<HasAttributeQ\>\"", ",", 
       "\"\<SameSetQ\>\"", ",", "\"\<NumericTensorQ\>\"", ",", 
       "\"\<MakeHoldAllCompleteHead\>\"", ",", 
-      "\"\<ReleaseHoldAssociation\>\"", ",", "\"\<ExtractSingleElement\>\"", 
-      ",", "\"\<StringMost\>\"", ",", "\"\<RulesToHash\>\""}], "}"}]}], 
-   "\[IndentingNewLine]", 
+      "\"\<ReleaseHoldAssociation\>\"", ",", "\"\<ExtractSingleElement\>\""}],
+      "}"}]}], "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"end", " ", "of", " ", "stuff"}], "*)"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
    RowBox[{
    "DepersistDef", "[", "\"\<TestingNotebookHeldVerificationTests\>\"", "]"}],
-    "\[IndentingNewLine]", "\n", "\n", 
+    "\n", "\n", "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "[", 
     RowBox[{"StartOfString", "~~", "\"\<FiniteMapping\>\"", "~~", 
      RowBox[{
@@ -355,8 +354,8 @@ Cell[BoxData[
    RowBox[{"DepersistDef", "[", 
     RowBox[{"\"\<Scene3D\>\"", "~~", 
      RowBox[{
-      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], ".."}]}], "]"}], 
-   "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+      RowBox[{"Except", "[", "\"\<`\>\"", "]"}], ".."}]}], "]"}], "\n", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "[", "\"\<SparseOptimizationProblem\>\"", "]"}], 
    "\[IndentingNewLine]", 
    RowBox[{
@@ -396,19 +395,14 @@ Cell[BoxData[
    RowBox[{"DepersistDef", "[", "\"\<DepthImage\>\"", "]"}], 
    "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "[", 
-    RowBox[{"StartOfString", "~~", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"Except", "[", "\"\<`\>\"", "]"}], "..."}], ")"}], "~~", 
-     "\"\<Pattern\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
+    RowBox[{"___", "~~", "\"\<Pattern\>\"", "~~", "___"}], "]"}], 
+   "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "[", 
     RowBox[{"\"\<Nameless\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "[", 
     RowBox[{"\"\<RGBD\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "[", 
     RowBox[{"\"\<CreateRGBD\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
-   RowBox[{"DepersistDef", "[", "\"\<InfiniTAMScene\>\"", "]"}], 
-   "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "[", 
     RowBox[{"\"\<InfiniTAMScene\>\"", "~~", "___"}], "]"}], 
    "\[IndentingNewLine]", 
@@ -442,21 +436,11 @@ Cell[BoxData[
       "\"\<PartitionRangeApproximately2DByLengthFlat\>\"", ",", 
       "\"\<PartitionRangeApproximately2DByLength\>\"", ",", 
       "\"\<StringLines\>\"", ",", "\"\<TrimmedCommaSplit\>\"", ",", 
-      "\"\<FirstLast\>\"", ",", "\"\<EvaluateOwnValuesOnlyAndHold\>\"", ",", 
-      "\"\<LinkValidQ\>\"", ",", "\"\<DeclareDataStructureHead\>\"", ",", 
-      "\"\<EmptyQ\>\"", ",", "\"\<NonEmptyQ\>\"", ",", 
-      "\"\<FromBinaryDigits\>\"", ",", "\"\<BinaryDigits\>\"", ",", 
-      "\"\<Clamp\>\"", ",", "\"\<ByteDigits\>\"", ",", 
-      "\"\<FromByteDigits\>\""}], "\[IndentingNewLine]", "}"}]}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      "\"\<FirstLast\>\"", ",", "\"\<EvaluateOwnValuesOnlyAndHold\>\""}], 
+     "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"DepersistDef", "[", 
-    RowBox[{"\"\<EProver\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
-   RowBox[{"DepersistDef", "[", "\"\<BitString\>\"", "]"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{"DepersistDef", "[", 
-    RowBox[{"\"\<BitString\>\"", "~~", "___"}], "]"}], "\[IndentingNewLine]", 
-   RowBox[{"DepersistDef", "[", 
-    RowBox[{"\"\<BitStringString\>\"", "~~", "___"}], "]"}]}]}]], "Input",
+    RowBox[{"\"\<EProver\>\"", "~~", "___"}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.6816357205273657`*^9, 3.681635764381112*^9}, {
    3.681635859727148*^9, 3.68163587600146*^9}, 3.681635933620405*^9, {
    3.681635986072893*^9, 3.6816359917679806`*^9}, 3.681636216294277*^9, {
@@ -551,16 +535,10 @@ Cell[BoxData[
    3.6833093961685658`*^9, 3.6833094029550915`*^9}, {3.683323748846813*^9, 
    3.6833237497720585`*^9}, {3.68332400285896*^9, 3.6833240070591617`*^9}, {
    3.6833262549964757`*^9, 3.6833262558871512`*^9}, {3.683327318949199*^9, 
-   3.6833273200742455`*^9}, {3.6833566973981886`*^9, 
-   3.6833566984294806`*^9}, {3.6839723976309185`*^9, 
-   3.6839724004117956`*^9}, {3.684264878975006*^9, 3.684264884047329*^9}, {
-   3.684602685250952*^9, 3.6846027193676014`*^9}, 3.68460330776317*^9, {
-   3.684603536553074*^9, 3.6846035442627068`*^9}, {3.6846071671219454`*^9, 
-   3.684607174153734*^9}, {3.6846534037900143`*^9, 3.6846534047301855`*^9}, {
-   3.6846613617940655`*^9, 3.6846613670786867`*^9}, {3.6846618358514833`*^9, 
-   3.6846618359255705`*^9}, {3.6851651030936565`*^9, 3.685165107843871*^9}, 
-   3.685165303289811*^9, 3.685165360824071*^9, {3.685165404676898*^9, 
-   3.6851654079739203`*^9}, {3.6852781182763443`*^9, 3.6852781193647118`*^9}}],
+   3.6833273200742455`*^9}, {3.6833566973981886`*^9, 3.6833566984294806`*^9}}],
+
+Cell[BoxData["\<\"allok\"\>"], "Print",
+ CellChangeTimes->{3.683820455546288*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -575,11 +553,7 @@ Cell[BoxData[
    ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
   "}"}]], "Output",
  CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
-  3.6832834731702175`*^9, 3.68329802337181*^9, 3.683650348137844*^9, 
-  3.683967881506618*^9, 3.6846026127493515`*^9, 3.6846033115158606`*^9, 
-  3.6846537325272913`*^9, 3.6848347431008835`*^9, 3.685164961243267*^9, 
-  3.685164996771367*^9, 3.685165308585598*^9, 3.685165363558551*^9, 
-  3.6851654108181224`*^9, 3.685178475171583*^9}],
+  3.6832834731702175`*^9, 3.68329802337181*^9, 3.6838204588686485`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -615,14 +589,10 @@ Cell[BoxData[
    "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
    ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
    "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null"}], "}"}]], "Output",
+   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
+  "}"}]], "Output",
  CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
-  3.6832834731702175`*^9, 3.68329802337181*^9, 3.683650348137844*^9, 
-  3.683967881506618*^9, 3.6846026127493515`*^9, 3.6846033115158606`*^9, 
-  3.6846537325272913`*^9, 3.6848347431008835`*^9, 3.685164961243267*^9, 
-  3.685164996771367*^9, 3.685165308585598*^9, 3.685165363558551*^9, 
-  3.6851654108181224`*^9, 3.685178479773358*^9}],
+  3.6832834731702175`*^9, 3.68329802337181*^9, 3.683820465226164*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -632,20 +602,50 @@ Cell[BoxData[
    "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
   "}"}]], "Output",
  CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
-  3.6832834731702175`*^9, 3.68329802337181*^9, 3.683650348137844*^9, 
-  3.683967881506618*^9, 3.6846026127493515`*^9, 3.6846033115158606`*^9, 
-  3.6846537325272913`*^9, 3.6848347431008835`*^9, 3.685164961243267*^9, 
-  3.685164996771367*^9, 3.685165308585598*^9, 3.685165363558551*^9, 
-  3.6851654108181224`*^9, 3.685178489775848*^9}],
+  3.6832834731702175`*^9, 3.68329802337181*^9, 3.6838204801247473`*^9}],
 
 Cell[BoxData[
- RowBox[{"{", "\<\"InfiniTAMScene\"\>", "}"}]], "Output",
+ TemplateBox[{
+  "NoOwnValues","msg",
+   "\"Cannot set \\!\\(\\*RowBox[{\\\"$CreateSymbolPattern\\\", \\\"=\\\", \
+RowBox[{\\\"InterpretationBox\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"DynamicBox\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ToBoxes\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Refresh\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"Style\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"Mouseover\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"Pattern\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"paul`FullSymbolName\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\
+\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\"]\\\"}], \
+\\\",\\\", \\\"Underlined\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"UpdateInterval\\\", \\\"\[Rule]\\\", \\\"_\\\"}]}], \\\"]\\\"}], \
+\\\",\\\", \\\"StandardForm\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"ImageSizeCache\\\", \\\"\[Rule]\\\", \\\"_\\\"}]}], \\\"]\\\"}], \
+\\\",\\\", \\\"sym_\\\"}], \\\"]\\\"}]}]\\). \
+\\!\\(\\*RowBox[{\\\"$CreateSymbolPattern\\\"}]\\) cannot have \
+OwnValues.\\n\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"DepersistDef\\\", \
+\\\",\\\", \\\"DepersistDef\\\", \\\",\\\", \\\"MessageAbort\\\"}], \
+\\\"}\\\"}]\\)\"",2,76,1,28159193770878090329,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6830038078210363`*^9, 3.6832834469034753`*^9, 
+  3.6832834849345474`*^9, 3.683298036361968*^9, 3.6838204803439045`*^9}],
+
+Cell[BoxData["$Aborted"], "Output",
  CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
-  3.6832834731702175`*^9, 3.68329802337181*^9, 3.683650348137844*^9, 
-  3.683967881506618*^9, 3.6846026127493515`*^9, 3.6846033115158606`*^9, 
-  3.6846537325272913`*^9, 3.6848347431008835`*^9, 3.685164961243267*^9, 
-  3.685164996771367*^9, 3.685165308585598*^9, 3.685165363558551*^9, 
-  3.6851654108181224`*^9, 3.6851784907941213`*^9}],
+  3.6832834731702175`*^9, 3.68329802337181*^9, 3.6838204805010147`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "extra$","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"extra$\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\"}]\\) may shadow or be shadowed \
+by other definitions.\"",2,82,2,28159193770878090329,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6830038078210363`*^9, 3.6832834469034753`*^9, 
+  3.6832834849345474`*^9, 3.683298036361968*^9, 3.6838204850062156`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -657,19 +657,13 @@ Cell[BoxData[
    "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
    ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
    "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", 
-   ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", 
-   "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null", ",", "Null"}], 
-  "}"}]], "Output",
+   ",", "Null", ",", "Null"}], "}"}]], "Output",
  CellChangeTimes->{3.683003786899584*^9, 3.6832834343553963`*^9, 
-  3.6832834731702175`*^9, 3.68329802337181*^9, 3.683650348137844*^9, 
-  3.683967881506618*^9, 3.6846026127493515`*^9, 3.6846033115158606`*^9, 
-  3.6846537325272913`*^9, 3.6848347431008835`*^9, 3.685164961243267*^9, 
-  3.685164996771367*^9, 3.685165308585598*^9, 3.685165363558551*^9, 
-  3.6851654108181224`*^9, 3.6851784940802307`*^9}]
+  3.6832834731702175`*^9, 3.68329802337181*^9, 3.683820485246386*^9}]
 }, Open  ]]
 },
-WindowSize->{913, 471},
-WindowMargins->{{Automatic, 252}, {Automatic, 264}},
+WindowSize->{784, 794},
+WindowMargins->{{347, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -685,12 +679,15 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 30767, 540, 3645, "Input"],
-Cell[31350, 564, 1059, 17, 69, "Output"],
-Cell[32412, 583, 2885, 41, 202, "Output"],
-Cell[35300, 626, 675, 12, 30, "Output"],
-Cell[35978, 640, 473, 7, 30, "Output"],
-Cell[36454, 649, 1143, 18, 69, "Output"]
+Cell[580, 22, 29252, 515, 5462, "Input"],
+Cell[29835, 539, 81, 1, 26, "Print"],
+Cell[29919, 542, 797, 13, 110, "Output"],
+Cell[30719, 557, 2607, 37, 374, "Output"],
+Cell[33329, 596, 413, 8, 62, "Output"],
+Cell[33745, 606, 1474, 24, 137, "Message"],
+Cell[35222, 632, 173, 2, 37, "Output"],
+Cell[35398, 636, 633, 11, 49, "Message"],
+Cell[36034, 649, 753, 12, 110, "Output"]
 }, Open  ]]
 }
 ]
