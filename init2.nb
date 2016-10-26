@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3248,        102]
-NotebookOptionsPosition[      2758,         80]
-NotebookOutlinePosition[      3102,         95]
-CellTagsIndexPosition[      3059,         92]
+NotebookDataLength[      4101,        119]
+NotebookOptionsPosition[      3575,         96]
+NotebookOutlinePosition[      3917,        111]
+CellTagsIndexPosition[      3874,        108]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -44,6 +44,17 @@ Cell[BoxData[{
  RowBox[{"<<", "BoolEval`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "GeneralUtilities`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "SymbolicC`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "PLYExport`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Unprotect", "@", "Global`$extra"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ClearAll", "@", "Global`$extra"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Unprotect", "@", "BoxForm`$extra"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClearAll", "@", "BoxForm`$extra"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Off", "[", 
    RowBox[{"GaussNewton", "::", "trace"}], "]"}], 
@@ -60,26 +71,31 @@ Cell[BoxData[{
          "\"\<SavedExpressionsTotalOrder.txt\>\""}], "}"}]}], ",", 
       "\"\<Table\>\""}], "]"}]}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.6859774055797524`*^9, 3.6859774152933197`*^9}, {
-  3.6859787340245123`*^9, 3.6859787835522127`*^9}, {3.6859788170108643`*^9, 
-  3.6859788522621174`*^9}}],
+   3.6859787340245123`*^9, 3.6859787835522127`*^9}, {3.6859788170108643`*^9, 
+   3.6859788522621174`*^9}, 3.6860645190819907`*^9, {3.686066231991865*^9, 
+   3.6860662320856185`*^9}, {3.686150319147056*^9, 3.686150337573083*^9}, {
+   3.6861504300193753`*^9, 3.686150444618891*^9}}],
+
+Cell[BoxData["\<\"allok\"\>"], "Print",
+ CellChangeTimes->{3.6863021341028395`*^9, 3.686376298790452*^9}],
 
 Cell[BoxData[
  TemplateBox[{
-  "Get","noopen",
-   "\"Cannot open \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\Paul\\\\\\\
-\\\\\\\\\\Dropbox\\\\\\\\\\\\\\\\Paul\\\\\\\\\\\\\\\\MasterarbeitShared\\\\\\\
-\\\\\\\\\\Research\\\\\\\\\\\\\\\\MathematicaLibraries\\\\\\\\\\\\\\\\\
-SavedExpressions\\\\\\\\\\\\\\\\defSelectNonzero.m\\\\\\\"\\\"}]\\).\"",2,24,
-   5,25662928399304609925,"Local"},
+  "extra$","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"extra$\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\"}]\\) may shadow or be shadowed \
+by other definitions.\"",2,13,1,28175943526511734600,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6859788037016563`*^9, 3.6859788343171577`*^9, 
-  3.6859788742781897`*^9}]
+ CellChangeTimes->{3.6861504200162816`*^9, 3.6861504797564974`*^9, 
+  3.6862340601033144`*^9, 3.686302160003177*^9, 3.6863763243496637`*^9}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{970, 991},
-WindowMargins->{{Automatic, 237}, {Automatic, 188}},
+WindowSize->{970, 794},
+WindowMargins->{{306, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -95,13 +111,14 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 106, 1, 90, "Title"],
-Cell[689, 25, 132, 1, 30, "Text"],
-Cell[824, 28, 158, 3, 30, "Text"],
-Cell[985, 33, 135, 1, 30, "Text"],
+Cell[580, 22, 106, 1, 122, "Title"],
+Cell[689, 25, 132, 1, 35, "Text"],
+Cell[824, 28, 158, 3, 35, "Text"],
+Cell[985, 33, 135, 1, 35, "Text"],
 Cell[CellGroupData[{
-Cell[1145, 38, 1035, 25, 164, "Input"],
-Cell[2183, 65, 547, 11, 22, "Message"]
+Cell[1145, 38, 1658, 38, 398, "Input"],
+Cell[2806, 78, 105, 1, 26, "Print"],
+Cell[2914, 81, 633, 11, 49, "Message"]
 }, Open  ]]
 }, Open  ]]
 }
