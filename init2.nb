@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4101,        119]
-NotebookOptionsPosition[      3575,         96]
-NotebookOutlinePosition[      3917,        111]
-CellTagsIndexPosition[      3874,        108]
+NotebookDataLength[      8237,        212]
+NotebookOptionsPosition[      7639,        187]
+NotebookOutlinePosition[      7980,        202]
+CellTagsIndexPosition[      7937,        199]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -39,12 +39,26 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"On", "@", "Assert"}], ";"}], "\n", 
- RowBox[{"<<", "MathematicaOverloadings.m"}], "\[IndentingNewLine]", 
- RowBox[{"<<", "Persist`"}], "\[IndentingNewLine]", 
- RowBox[{"<<", "BoolEval`"}], "\[IndentingNewLine]", 
- RowBox[{"<<", "GeneralUtilities`"}], "\[IndentingNewLine]", 
- RowBox[{"<<", "SymbolicC`"}], "\[IndentingNewLine]", 
- RowBox[{"<<", "PLYExport`"}], "\[IndentingNewLine]", 
+ RowBox[{"Get", "[", 
+  RowBox[{"FileNameJoin", "@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+     "\"\<MathematicaOverloadings.m\>\""}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "@", "\"\<Persist`\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "@", "\"\<BoolEval`\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "@", "\"\<GeneralUtilities`\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "@", "\"\<SymbolicC`\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "PLYExport`"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Needs", "@", "\"\<PLYExport`\>\""}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "@", "\"\<ExportTable`\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Needs", "@", "\"\<MATLink`\>\""}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Unprotect", "@", "Global`$extra"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -56,10 +70,6 @@ Cell[BoxData[{
    RowBox[{"ClearAll", "@", "BoxForm`$extra"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Off", "[", 
-   RowBox[{"GaussNewton", "::", "trace"}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
   RowBox[{"DepersistDef", "~", "Scan", "~", 
    RowBox[{"Flatten", "@", 
     RowBox[{"Import", "[", 
@@ -69,15 +79,67 @@ Cell[BoxData[{
         RowBox[{
          RowBox[{"NotebookDirectory", "[", "]"}], ",", 
          "\"\<SavedExpressionsTotalOrder.txt\>\""}], "}"}]}], ",", 
-      "\"\<Table\>\""}], "]"}]}]}], ";"}]}], "Input",
+      "\"\<Table\>\""}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"GaussNewton", "::", "trace"}], "]"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"don", "'"}], "t", " ", "need", " ", "this", " ", "usually"}], 
+    " ", "-", " ", 
+    RowBox[{
+    "TODO", " ", "automatically", " ", "disable", " ", "by", " ", "default", 
+     " ", 
+     RowBox[{"all", " ", "::", "trace"}]}], " ", "-", " ", 
+    RowBox[{"message", " ", 
+     RowBox[{"group", "?", " ", 
+      RowBox[{"Note", ":", " ", 
+       RowBox[{
+       "MUST", " ", "be", " ", "called", " ", "after", " ", "GaussNewton", 
+        " ", "has", " ", "been", " ", 
+        RowBox[{"loaded", "?"}]}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "Combinatorica`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"$ContextPath", "=", 
+    RowBox[{
+    "$ContextPath", "~", "DeleteThenAppend", "~", 
+     "\"\<Combinatorica`\>\""}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{"0", ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"prefer", " ", "built"}], "-", 
+    RowBox[{"in", " ", "Graph", " ", "etc"}]}], "*)"}]}]}], "Input",
+ InitializationCell->False,
  CellChangeTimes->{{3.6859774055797524`*^9, 3.6859774152933197`*^9}, {
    3.6859787340245123`*^9, 3.6859787835522127`*^9}, {3.6859788170108643`*^9, 
    3.6859788522621174`*^9}, 3.6860645190819907`*^9, {3.686066231991865*^9, 
    3.6860662320856185`*^9}, {3.686150319147056*^9, 3.686150337573083*^9}, {
-   3.6861504300193753`*^9, 3.686150444618891*^9}}],
+   3.6861504300193753`*^9, 3.686150444618891*^9}, {3.6864835348807836`*^9, 
+   3.6864835351620407`*^9}, {3.6865087298994384`*^9, 3.686508746226886*^9}, {
+   3.68654900998518*^9, 3.6865490383144627`*^9}, {3.6867318174208317`*^9, 
+   3.686731821493081*^9}, {3.6867320776966734`*^9, 3.686732114876849*^9}, {
+   3.6867321894815793`*^9, 3.686732191904151*^9}, {3.6867402963055315`*^9, 
+   3.686740298961941*^9}, 3.686740345168372*^9, 3.6869300536848173`*^9, {
+   3.687424590303399*^9, 3.6874246328323565`*^9}, {3.6874250895053005`*^9, 
+   3.6874251036072373`*^9}, {3.6877922740727806`*^9, 3.6877922846409616`*^9}}],
 
 Cell[BoxData["\<\"allok\"\>"], "Print",
- CellChangeTimes->{3.6863021341028395`*^9, 3.686376298790452*^9}],
+ CellChangeTimes->{3.688216124401952*^9}],
 
 Cell[BoxData[
  TemplateBox[{
@@ -87,15 +149,44 @@ multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
 RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
 \\(\\*RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\"}]\\) may shadow or be shadowed \
-by other definitions.\"",2,13,1,28175943526511734600,"Local"},
+by other definitions.\"",2,16,1,28187925808052889457,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6861504200162816`*^9, 3.6861504797564974`*^9, 
-  3.6862340601033144`*^9, 3.686302160003177*^9, 3.6863763243496637`*^9}]
+ CellChangeTimes->{
+  3.6867533470126143`*^9, 3.6868990652303996`*^9, 3.686910101876005*^9, 
+   3.6869101439386144`*^9, 3.686912893299105*^9, 3.686930069142259*^9, 
+   3.6870804739976835`*^9, {3.687091082181972*^9, 3.6870910932321496`*^9}, 
+   3.687158876967934*^9, 3.6871719528850584`*^9, 3.6871827535855417`*^9, 
+   3.687185230876543*^9, 3.6872493488684416`*^9, 3.687337118268016*^9, 
+   3.6873481398698254`*^9, 3.687424552286974*^9, 3.6874250825952024`*^9, 
+   3.687509465746641*^9, 3.6876164920864325`*^9, 3.6876862263186502`*^9, 
+   3.6877648706830964`*^9, 3.687792214683714*^9, 3.6877927671757565`*^9, 
+   3.687795257259192*^9, 3.687947945167845*^9, 3.688120324564582*^9, 
+   3.6882161476002283`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","compat",
+   "\"Combinatorica Graph and Permutations functionality has been superseded \
+by preloaded functionality. The package now being loaded may conflict with \
+this. Please see the Compatibility Guide for details.\"",2,18,2,
+   28187925808052889457,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6867533470126143`*^9, 3.6868990652303996`*^9, 3.686910101876005*^9, 
+   3.6869101439386144`*^9, 3.686912893299105*^9, 3.686930069142259*^9, 
+   3.6870804739976835`*^9, {3.687091082181972*^9, 3.6870910932321496`*^9}, 
+   3.687158876967934*^9, 3.6871719528850584`*^9, 3.6871827535855417`*^9, 
+   3.687185230876543*^9, 3.6872493488684416`*^9, 3.687337118268016*^9, 
+   3.6873481398698254`*^9, 3.687424552286974*^9, 3.6874250825952024`*^9, 
+   3.687509465746641*^9, 3.6876164920864325`*^9, 3.6876862263186502`*^9, 
+   3.6877648706830964`*^9, 3.687792214683714*^9, 3.6877927671757565`*^9, 
+   3.687795257259192*^9, 3.687947945167845*^9, 3.688120324564582*^9, 
+   3.68821616595592*^9}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{970, 794},
-WindowMargins->{{306, Automatic}, {Automatic, 0}},
+WindowSize->{784, 794},
+WindowMargins->{{98, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -116,9 +207,11 @@ Cell[689, 25, 132, 1, 35, "Text"],
 Cell[824, 28, 158, 3, 35, "Text"],
 Cell[985, 33, 135, 1, 35, "Text"],
 Cell[CellGroupData[{
-Cell[1145, 38, 1658, 38, 398, "Input"],
-Cell[2806, 78, 105, 1, 26, "Print"],
-Cell[2914, 81, 633, 11, 49, "Message"]
+Cell[1145, 38, 4127, 100, 806, "Input",
+ InitializationCell->False],
+Cell[5275, 140, 81, 1, 26, "Print"],
+Cell[5359, 143, 1199, 20, 49, "Message"],
+Cell[6561, 165, 1050, 18, 71, "Message"]
 }, Open  ]]
 }, Open  ]]
 }

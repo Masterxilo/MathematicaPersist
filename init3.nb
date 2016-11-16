@@ -1,0 +1,127 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3898,        119]
+NotebookOptionsPosition[      3544,        102]
+NotebookOutlinePosition[      3887,        117]
+CellTagsIndexPosition[      3844,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"On", "@", "Assert"}], ";"}], "\n", 
+ RowBox[{"Get", "[", 
+  RowBox[{"FileNameJoin", "@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+     "\"\<MathematicaOverloadings.m\>\""}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "Persist`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "BoolEval`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "GeneralUtilities`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "SymbolicC`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "PLYExport`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "ExportTable`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "MATLink`"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Unprotect", "@", "Global`$extra"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ClearAll", "@", "Global`$extra"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Unprotect", "@", "BoxForm`$extra"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ClearAll", "@", "BoxForm`$extra"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Print", "@", "#"}], ";", 
+      RowBox[{"DepersistDef", "@", "#"}]}], ")"}], "&"}], "~", "Scan", "~", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"Import", "[", 
+     RowBox[{
+      RowBox[{"FileNameJoin", "@", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+         "\"\<SavedExpressionsTotalOrder.txt\>\""}], "}"}]}], ",", 
+      "\"\<Table\>\""}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"GaussNewton", "::", "trace"}], "]"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"don", "'"}], "t", " ", "need", " ", "this", " ", "usually"}], 
+    " ", "-", " ", 
+    RowBox[{
+    "TODO", " ", "automatically", " ", "disable", " ", "by", " ", "default", 
+     " ", 
+     RowBox[{"all", " ", "::", "trace"}]}], " ", "-", " ", 
+    RowBox[{"message", " ", 
+     RowBox[{"group", "?", " ", 
+      RowBox[{"Note", ":", " ", 
+       RowBox[{
+       "MUST", " ", "be", " ", "called", " ", "after", " ", "GaussNewton", 
+        " ", "has", " ", "been", " ", 
+        RowBox[{"loaded", "?"}]}]}]}]}]}], 
+   "*)"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6871884527787733`*^9, 3.687188471082508*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "extra$","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"extra$\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\"}]\\) may shadow or be shadowed \
+by other definitions.\"",2,14,1,25670856426080244718,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.687184715812206*^9, 3.687188545567505*^9}]
+}, Open  ]]
+},
+WindowSize->{784, 794},
+WindowMargins->{{Automatic, 406}, {28, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1084, 26, 297, "Input"],
+Cell[CellGroupData[{
+Cell[1667, 50, 1302, 37, 164, "Input"],
+Cell[2972, 89, 556, 10, 41, "Message"]
+}, Open  ]]
+}
+]
+*)
+
