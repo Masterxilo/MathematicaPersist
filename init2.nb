@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8240,        215]
-NotebookOptionsPosition[      7641,        190]
-NotebookOutlinePosition[      7981,        205]
-CellTagsIndexPosition[      7938,        202]
+NotebookDataLength[      9507,        243]
+NotebookOptionsPosition[      8906,        218]
+NotebookOutlinePosition[      9248,        233]
+CellTagsIndexPosition[      9205,        230]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -55,8 +55,31 @@ Cell[BoxData[{
   RowBox[{"(*", 
    RowBox[{"Needs", "@", "\"\<PLYExport`\>\""}], 
    "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{"Needs", "@", "\"\<ExportTable`\>\""}], "\[IndentingNewLine]", 
- RowBox[{"Needs", "@", "\"\<MATLink`\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Needs", "@", "\"\<ExportTable`\>\""}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"SetEnvironment", "[", 
+  RowBox[{"\"\<PATH\>\"", "\[Rule]", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+     RowBox[{"Last", "@", 
+      RowBox[{"GetEnvironment", "[", 
+       RowBox[{"{", "\"\<PATH\>\"", "}"}], "]"}]}], ",", 
+     "\"\<;C:\\\\Program Files\\\\MATLAB\\\\MATLAB Production \
+Server\\\\R2015a\\\\bin\\\\win64\>\""}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"SetEnvironment", "[", 
+  RowBox[{"\"\<PATH\>\"", "\[Rule]", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+     RowBox[{"Last", "@", 
+      RowBox[{"GetEnvironment", "[", 
+       RowBox[{"{", "\"\<PATH\>\"", "}"}], "]"}]}], ",", 
+     "\"\<;C:\\\\Programs\\\\MATLAB R2015a\\\\bin\\\\win64\>\""}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Needs", "@", "\"\<MATLink`\>\""}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Needs", "@", "\"\<CUDALink`\>\""}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
@@ -138,7 +161,9 @@ Cell[BoxData[{
    3.686740298961941*^9}, 3.686740345168372*^9, 3.6869300536848173`*^9, {
    3.687424590303399*^9, 3.6874246328323565`*^9}, {3.6874250895053005`*^9, 
    3.6874251036072373`*^9}, {3.6877922740727806`*^9, 
-   3.6877922846409616`*^9}, {3.6888168074541044`*^9, 3.6888168138026247`*^9}}],
+   3.6877922846409616`*^9}, {3.6888168074541044`*^9, 
+   3.6888168138026247`*^9}, {3.692621661422454*^9, 3.692621662555444*^9}, {
+   3.6926217064422007`*^9, 3.692621713681352*^9}, 3.6926217717108207`*^9}],
 
 Cell[BoxData[
  TemplateBox[{
@@ -148,48 +173,51 @@ multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
 RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
 \\(\\*RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\"}]\\) may shadow or be shadowed \
-by other definitions.\"",2,15,1,28201667678336117468,"Local"},
+by other definitions.\"",2,17,3,28207227504172108738,"Local"},
   "MessageTemplate"]], "Message", "MSG",
  CellChangeTimes->{3.688915546845977*^9, 3.6889307839035845`*^9, 
   3.688977345111904*^9, 3.689074344316778*^9, 3.689074873882574*^9, 
   3.6893320777716923`*^9, 3.689363088022257*^9, 3.6894149592807474`*^9, 
   3.6896259186041026`*^9, 3.690017331245017*^9, 3.69001775937117*^9, 
-  3.6903014834166536`*^9}],
+  3.6903014834166536`*^9, 3.690545486469181*^9, 3.690545678110692*^9, 
+  3.690658165227769*^9, 3.690815761086108*^9, 3.6911499749393206`*^9}],
 
 Cell[BoxData[
  TemplateBox[{
   "Get","noopen",
    "\"Cannot open \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\Paul'\
-Masterxilo'\\\\\\\\\\\\\\\\Dropbox\\\\\\\\\\\\\\\\Paul\\\\\\\\\\\\\\\\\
-MasterarbeitShared\\\\\\\\\\\\\\\\Research\\\\\\\\\\\\\\\\\
+\\!\\(\\*RowBox[{\\\"\\\\\\\"E:\\\\\\\\\\\\\\\\Dropbox\\\\\\\\\\\\\\\\Paul\\\\\
+\\\\\\\\\\\\MasterarbeitShared\\\\\\\\\\\\\\\\Research\\\\\\\\\\\\\\\\\
 MathematicaLibraries\\\\\\\\\\\\\\\\SavedExpressions\\\\\\\\\\\\\\\\\
-defSOPMGetP.m\\\\\\\"\\\"}]\\).\"",2,15,2,28201667678336117468,"Local"},
+defCoordinateBoundsList.m\\\\\\\"\\\"}]\\).\"",2,17,4,28207227504172108738,
+   "Local"},
   "MessageTemplate"]], "Message", "MSG",
  CellChangeTimes->{3.688915546845977*^9, 3.6889307839035845`*^9, 
   3.688977345111904*^9, 3.689074344316778*^9, 3.689074873882574*^9, 
   3.6893320777716923`*^9, 3.689363088022257*^9, 3.6894149592807474`*^9, 
   3.6896259186041026`*^9, 3.690017331245017*^9, 3.69001775937117*^9, 
-  3.6903015099624014`*^9}],
+  3.6903014834166536`*^9, 3.690545486469181*^9, 3.690545678110692*^9, 
+  3.690658165227769*^9, 3.690815761086108*^9, 3.691150006629509*^9}],
 
 Cell[BoxData[
  TemplateBox[{
   "General","compat",
    "\"Combinatorica Graph and Permutations functionality has been superseded \
 by preloaded functionality. The package now being loaded may conflict with \
-this. Please see the Compatibility Guide for details.\"",2,17,3,
-   28201667678336117468,"Local"},
+this. Please see the Compatibility Guide for details.\"",2,19,5,
+   28207227504172108738,"Local"},
   "MessageTemplate"]], "Message", "MSG",
  CellChangeTimes->{3.688915546845977*^9, 3.6889307839035845`*^9, 
   3.688977345111904*^9, 3.689074344316778*^9, 3.689074873882574*^9, 
   3.6893320777716923`*^9, 3.689363088022257*^9, 3.6894149592807474`*^9, 
   3.6896259186041026`*^9, 3.690017331245017*^9, 3.69001775937117*^9, 
-  3.690301510885315*^9}]
+  3.6903014834166536`*^9, 3.690545486469181*^9, 3.690545678110692*^9, 
+  3.690658165227769*^9, 3.690815761086108*^9, 3.691150006679542*^9}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{784, 818},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{784, 677},
+WindowMargins->{{Automatic, 326}, {2, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -210,11 +238,11 @@ Cell[689, 25, 132, 1, 30, "Text"],
 Cell[824, 28, 158, 3, 30, "Text"],
 Cell[985, 33, 135, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1145, 38, 4251, 102, 601, "Input",
+Cell[1145, 38, 5212, 127, 772, "Input",
  InitializationCell->False],
-Cell[5399, 142, 797, 14, 41, "Message"],
-Cell[6199, 158, 762, 14, 59, "Message"],
-Cell[6964, 174, 649, 12, 41, "Message"]
+Cell[6360, 167, 912, 15, 41, "Message"],
+Cell[7275, 184, 836, 15, 41, "Message"],
+Cell[8114, 201, 764, 13, 41, "Message"]
 }, Open  ]]
 }, Open  ]]
 }
