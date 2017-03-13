@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9507,        243]
-NotebookOptionsPosition[      8906,        218]
-NotebookOutlinePosition[      9248,        233]
-CellTagsIndexPosition[      9205,        230]
+NotebookDataLength[     23640,        586]
+NotebookOptionsPosition[     22167,        533]
+NotebookOutlinePosition[     22606,        550]
+CellTagsIndexPosition[     22563,        547]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -49,9 +49,8 @@ Cell[BoxData[{
  RowBox[{"Needs", "@", "\"\<Persist`\>\""}], "\[IndentingNewLine]", 
  RowBox[{"Needs", "@", "\"\<BoolEval`\>\""}], "\[IndentingNewLine]", 
  RowBox[{"Needs", "@", "\"\<GeneralUtilities`\>\""}], "\[IndentingNewLine]", 
- RowBox[{"Needs", "@", "\"\<SymbolicC`\>\""}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"<<", "PLYExport`"}], "\[IndentingNewLine]", 
+  RowBox[{"Needs", "@", "\"\<SymbolicC`\>\""}], "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{"Needs", "@", "\"\<PLYExport`\>\""}], 
    "*)"}]}], "\[IndentingNewLine]", 
@@ -77,11 +76,24 @@ Server\\\\R2015a\\\\bin\\\\win64\>\""}], "]"}]}],
        RowBox[{"{", "\"\<PATH\>\"", "}"}], "]"}]}], ",", 
      "\"\<;C:\\\\Programs\\\\MATLAB R2015a\\\\bin\\\\win64\>\""}], "]"}]}], 
   "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "@", "\"\<MATLink`\>\""}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Needs", "@", "\"\<MATLink`\>\""}], "\[IndentingNewLine]", 
+  RowBox[{"OpenMATLAB", "[", "]"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Needs", "@", "\"\<CUDALink`\>\""}], 
+  RowBox[{
+   RowBox[{"SetEnvironment", "[", 
+    RowBox[{"\"\<NSIGHT_CUDA_DEBUGGER\>\"", "\[Rule]", "\"\<1\>\""}], "]"}], 
+   ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"cannot", " ", "hurt", " ", 
+    RowBox[{"(", 
+     RowBox[{"except", " ", "maybe", " ", "performance"}], ")"}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "@", "\"\<NotebookBackup`\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "@", "\"\<CUDALink`\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<CCompilerDriver`\>\"", "]"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Unprotect", "@", "Global`$extra"}], ";"}], "\[IndentingNewLine]", 
@@ -126,28 +138,18 @@ Server\\\\R2015a\\\\bin\\\\win64\>\""}], "]"}]}],
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "Combinatorica`"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"$ContextPath", "=", 
-    RowBox[{
-    "$ContextPath", "~", "DeleteThenAppend", "~", 
-     "\"\<Combinatorica`\>\""}]}], ";"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+  RowBox[{"$ContextPath", "=", 
+   RowBox[{
+   "$ContextPath", "~", "DeleteThenAppend", "~", "\"\<Combinatorica`\>\""}]}],
+   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Manipulate", "[", 
-   RowBox[{"0", ",", 
-    RowBox[{"{", 
-     RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"Plot", "[", 
-    RowBox[{"0", ",", 
-     RowBox[{"{", 
-      RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], ";"}], 
   RowBox[{"(*", 
    RowBox[{
     RowBox[{"prefer", " ", "built"}], "-", 
-    RowBox[{"in", " ", "Graph", " ", "etc"}]}], "*)"}]}]}], "Input",
+    RowBox[{"in", " ", 
+     RowBox[{"Graph", "[", "]"}], " ", "object", " ", 
+     RowBox[{"etc", ".", " ", "over"}], " ", "the", " ", "Combinatorica", " ",
+      "variant"}]}], "*)"}]}]}], "Input",
  InitializationCell->False,
  CellChangeTimes->{{3.6859774055797524`*^9, 3.6859774152933197`*^9}, {
    3.6859787340245123`*^9, 3.6859787835522127`*^9}, {3.6859788170108643`*^9, 
@@ -163,7 +165,58 @@ Server\\\\R2015a\\\\bin\\\\win64\>\""}], "]"}]}],
    3.6874251036072373`*^9}, {3.6877922740727806`*^9, 
    3.6877922846409616`*^9}, {3.6888168074541044`*^9, 
    3.6888168138026247`*^9}, {3.692621661422454*^9, 3.692621662555444*^9}, {
-   3.6926217064422007`*^9, 3.692621713681352*^9}, 3.6926217717108207`*^9}],
+   3.6926217064422007`*^9, 3.692621713681352*^9}, 3.6926217717108207`*^9, {
+   3.6948053257257495`*^9, 3.694805337744111*^9}, {3.695126986572589*^9, 
+   3.695127002772913*^9}, {3.6953272182760463`*^9, 3.6953275041339364`*^9}, {
+   3.695327547688174*^9, 3.6953275586747613`*^9}, 3.6965280399279003`*^9, {
+   3.6965283806292777`*^9, 3.6965283807691665`*^9}, {3.696784101663242*^9, 
+   3.69678410174234*^9}, {3.6977114075501623`*^9, 3.6977114475346537`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetDelayed","write",
+   "\"Tag \\!\\(\\*RowBox[{\\\"ImageMultiply\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"ImageMultiply\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"x_\\\", \\\"?\\\", \\\"NumericQ\\\"}], \\\",\\\", \
+\\\"i_Image\\\"}], \\\"]\\\"}]\\) is Protected.\"",2,2,1,25744339007723413908,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->CompressedData["
+1:eJwVyltIk2EAh/FvmBeTJeShQJDVvmwHcIPC0jXNVzpMHDmmQ1KrJdlqUt4U
+LZotrDnxMCkGwoJmR42auDliS8usIOlmMcuh1RzD6eZLed22oP938fC7efZ0
+dOs6eQzDqFFNQVuDwEKJbDM7UwgDTtYsgwI27/spzhrVrlbo9wY8Edj8mgmv
+w3gmWcb0UBJqXhQboTxiPL7vFiVjMXqTU6m/nOuF/TkhqcRKyZeBj4QzXj8u
+PwsvzItEr+BmflTXeJsSyc6k890dSlQ/B3+V3KWkaP1QWAS1E9lPGuhbdlc+
+g19Xu/wZGDY39bI2SmbN3S7O80Tj51QtXNuogglBg0QJTX/Swnruc/GLrsMs
+z1S+vY8S8z+L6Rj8UBfkX4Sxqi3nJTg1Wi79DCd9lvgG1AX1I6V2So4U6our
+Ya22TK6G6pes7QxMVTxSDMOhlj72PqxIW5UJ6KBbT6v7obR1/wmYn9Gc5kyX
+Wns56Y6cF5zibZkg58qsQqGG78ftoy3wqGHtWztcSPw+aYABl6EnAqXOYsfI
+ACVrK10/3sK97eLaFGwLPc7lD1LifTi15INXHpREF+GqfGxaPETJwWyT0Ax3
+z7nnb8CrjFtihwUdyzE/fG6TzS3BJ/fqDv+FRs9MJ2+Ykso83xsFVEe1qQNw
+unH83CT0iIVJ1kHJfzLvJxs=
+  "]],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Set","write",
+   "\"Tag \\!\\(\\*RowBox[{\\\"ImageMultiply\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"DownValues\\\", \\\"[\\\", \\\"ImageMultiply\\\", \
+\\\"]\\\"}]\\) is Protected.\"",2,2,2,25744339007723413908,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->CompressedData["
+1:eJwVyltIk2EAh/FvmBeTJeShQBBzX7YDuIFh6ZrmKx0mjhzTIXmoJdlqUt4U
+LZotrDnxMCkGwoJmxxWluDliS8usIOlmMcuh1RzD6eZLed22oP938fC7eUq7
+erXdPIZhVKg2r71RYKZEupWZzYd+B2uSQgGb8/0UZ61yTxv0efyTYdjymglt
+wFg6Ucb0URJsWRIZoCxsOL7/JiUTUXqDU6G7lO2Bg1lBidhCyZehj4Qz1uCW
+nYHnF4TCV3ArN6JtukWJeHfC8e42Jcqfw7+K7lBSsHEoJISa55lPauhdcVU9
+hV/XenxpGDI197NWSuZMvU7Oc0Tt41QuXt2shnFBo1gBjX9SJQ3c5+QXXIMZ
+nrF85wAlpn9m4zH4oT7AvwCj1duOi3B6vFzyGU55zbFNqA3oxoptlBzJ1xXW
+wDpNmUwFVS9Z62mYrHwoH4UjrQPsPViZsiji0E63n9QMQklbxQmYm1Z3cqaK
+Lf2cdFfWC07RjnSAc3VOLlfB927beCs8ql//1gEX479P6qHfqe8LQ4mj0D42
+RMn6as+Pt3Bfh6guCduDj7L5w5R4Hkwve+Hl+0WRJbgmm5gRjVByMNNcYoJ7
+510L1+EVxiW2wbyulagPPrNK55fh47v1h/9Cw+RsN2+Ukqoc7xs5VEU0yQNw
+psl9dgqGRKUJ1k7JfzQjJ0I=
+  "]],
 
 Cell[BoxData[
  TemplateBox[{
@@ -173,51 +226,315 @@ multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
 RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
 \\(\\*RowBox[{\\\"\\\\\\\"BoxForm`\\\\\\\"\\\"}]\\) may shadow or be shadowed \
-by other definitions.\"",2,17,3,28207227504172108738,"Local"},
+by other definitions.\"",2,20,3,25744339007723413908,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.688915546845977*^9, 3.6889307839035845`*^9, 
-  3.688977345111904*^9, 3.689074344316778*^9, 3.689074873882574*^9, 
-  3.6893320777716923`*^9, 3.689363088022257*^9, 3.6894149592807474`*^9, 
-  3.6896259186041026`*^9, 3.690017331245017*^9, 3.69001775937117*^9, 
-  3.6903014834166536`*^9, 3.690545486469181*^9, 3.690545678110692*^9, 
-  3.690658165227769*^9, 3.690815761086108*^9, 3.6911499749393206`*^9}],
+ CellChangeTimes->CompressedData["
+1:eJwVyltIk2EAh/FvmBeTJeWhQBBrX7YDuEFh6ZrmKx0mjhzTIanVkmw1MW+K
+Fs0W1px4mBQDYUGz44xS3ByxpWVWkHSzmOXQao7h1O2lvG5b0P+7ePjdPHvb
+u7UdPIZhVKg6r7VeYKZEmszM5EO/gzVJoYDN+X6as1q5uwX6PP6JMGx6zYTW
+YSy9Wcr0UBJsWhQZoCxsOLH/FiVjUXqTU6HryvbA/qygRGyh5MvAR8IZq3PL
+zsGL80LhK5jMjWgbblMi3rXpeHeHEuXPwV9FdykpWD8cEkLNeOaTGnqXXRXP
+4NfVTl8ahkyNvayVkllTt5PzAlH7OJUL1zYqYVxQL1ZA459USR33OfkF12GG
+Zyzb3keJ6Z/ZeBx+qA3wL8Fo5ZbjMpwaLZN8hpNec2wDagO6kWIbJUfzdYVV
+sEZTKlNB1UvWehYmyh/Jh+FQcx97H5anLIo4tNOtp1X9UNJy4CTMTavPcKaK
+Lb2cdGfWC07RtnSAc2VWLlfB927baDM8pl/71gYX4r9P6aHfqe8JQ4mj0D4y
+QMnaSuePt3Bfm6gmAVuDj7P5g5R4Hk4teeGVB0WRRbgqG5sWDVFyKNNYYoJ7
+5lzzN+BVxiW2wbz25agPPrdK55bgk3u1R/5Cw8RMB2+Ykooc7xs5VEU0iYNw
+usF9fhJ2RXckWTsl/wE1rieH
+  "]],
 
 Cell[BoxData[
  TemplateBox[{
   "Get","noopen",
    "\"Cannot open \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"E:\\\\\\\\\\\\\\\\Dropbox\\\\\\\\\\\\\\\\Paul\\\\\
-\\\\\\\\\\\\MasterarbeitShared\\\\\\\\\\\\\\\\Research\\\\\\\\\\\\\\\\\
-MathematicaLibraries\\\\\\\\\\\\\\\\SavedExpressions\\\\\\\\\\\\\\\\\
-defCoordinateBoundsList.m\\\\\\\"\\\"}]\\).\"",2,17,4,28207227504172108738,
-   "Local"},
+\\!\\(\\*RowBox[{\\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\Paul\\\\\\\
+\\\\\\\\\\Dropbox\\\\\\\\\\\\\\\\Paul\\\\\\\\\\\\\\\\MasterarbeitShared\\\\\\\
+\\\\\\\\\\Research\\\\\\\\\\\\\\\\MathematicaLibraries\\\\\\\\\\\\\\\\\
+SavedExpressions\\\\\\\\\\\\\\\\defFileWriteBytes.m\\\\\\\"\\\"}]\\).\"",2,20,
+   4,25744339007723413908,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.688915546845977*^9, 3.6889307839035845`*^9, 
-  3.688977345111904*^9, 3.689074344316778*^9, 3.689074873882574*^9, 
-  3.6893320777716923`*^9, 3.689363088022257*^9, 3.6894149592807474`*^9, 
-  3.6896259186041026`*^9, 3.690017331245017*^9, 3.69001775937117*^9, 
-  3.6903014834166536`*^9, 3.690545486469181*^9, 3.690545678110692*^9, 
-  3.690658165227769*^9, 3.690815761086108*^9, 3.691150006629509*^9}],
+ CellChangeTimes->CompressedData["
+1:eJwVyltIk2EAh/FvmBeTJeShwBBrX7YDuEFh6ZrmKx0mjhzTIanVkmw2KW+K
+Fs0W1tzwMCkGwoJmxxWluDliS8usIOlmMcuh1RzDqfMlvW5b0P+7ePjdPHvb
+u7UdPIZhVKg6r7VeYKZEupGZyocBJ2uSQgGb8+M0Z7VyVwv0ewNjEdj0hgmv
+wnh6vZTpoSTUNC8yQFnEcGL/LUpGY/Qmp0J3OdsL7VkhidhCydf+T4QzXueR
+nYMXZ4XC13AjN6ptuE2JeOe68/0dSpS/Bn4X3aWkYPVwWAg1LzKf1dC36K54
+Br8td/nTMGxq7GWtlEybul2cF4jaz6mcu7ZWCROCerECGjdTJXXc5+IXXIcZ
+nrFsex8lpn9m43H4sTbI74Sxyi3nJTgxUib5Asd95vga1AZ1w8U2So7m6wqr
+YI2mVKaCqles9SxMlj+SD8HB5j72PixPWRQJ6KBbT6vsUNJy4CTMTavPcKaK
+Lb2cdEfWS07RtnSQc2laLlfBDx7bSDM8pl/53gbnEn9O6WHApe+JQImz0DHc
+T8nKUtfPd3Bfm6gmCVtDj7P5A5R4H04s+OCVB0XRebgsG50UDVJyKNNYYoJ7
+ZtyzN+BVxi22wbz2xZgfPrdKZxbgk3u1R/5Cw9hUB2+Ikooc31s5VEU1yYNw
+ssFzfhzaO3dvsg5K/gMzlCc5
+  "]],
 
 Cell[BoxData[
  TemplateBox[{
   "General","compat",
    "\"Combinatorica Graph and Permutations functionality has been superseded \
 by preloaded functionality. The package now being loaded may conflict with \
-this. Please see the Compatibility Guide for details.\"",2,19,5,
-   28207227504172108738,"Local"},
+this. Please see the Compatibility Guide for details.\"",2,22,5,
+   25744339007723413908,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.688915546845977*^9, 3.6889307839035845`*^9, 
-  3.688977345111904*^9, 3.689074344316778*^9, 3.689074873882574*^9, 
-  3.6893320777716923`*^9, 3.689363088022257*^9, 3.6894149592807474`*^9, 
-  3.6896259186041026`*^9, 3.690017331245017*^9, 3.69001775937117*^9, 
-  3.6903014834166536`*^9, 3.690545486469181*^9, 3.690545678110692*^9, 
-  3.690658165227769*^9, 3.690815761086108*^9, 3.691150006679542*^9}]
+ CellChangeTimes->CompressedData["
+1:eJwVyltIk2EAh/FvmBeTJeShQBBtX7YDuEFh6ZrmKx0mjhzTIanVkmw1KW+K
+Fs0W1px4mBQDYUGz44pS3ByxpWVWkHSz2Mqh1RzDqfMlvW6b0P+7ePjdPHs7
+urWdPIZhVKgmr61BYKZEupGZzod+B2uSQgGb8/M0Z41yTyv0efzjEdj8lgmt
+wnh6vYzpoSTYHBYZoCxiOLH/NiVjMXqLU6G7ku2B/VlBidhCybeBz4QzXu+W
+nYMX54TCN3AjN6ptvEOJePe648NdSpS/B/8U3aOkYPVwSAg1LzNf1NC76Kp8
+Dr8vd/nSMGRq6mWtlMyYup2cF4jax6mcv75WBROCBrECGjdTJfXc5+QX3IAZ
+nrF8Zx8lpm2z8Tj8VBfgX4Kxqi3HZTg5Wi75Cie85vga1AZ0I8U2So7m6wqr
+Ya2mTKaCqtes9SxMVjyWD8Ohlj72AaxIWRQJaKdbz6r7oaT1wEmYm1af4UwV
+W3o56a6sV5yiHekA59KMXK6CH9220RZ4TL/yox3OJ/6e0kO/U98TgRJHoX1k
+gJKVpa5f7+G+dlFtErYFn2TzBynxPJpc8MKrD4uiYbgsG5sSDVFyKNNUYoKl
+s665m/Aa4xLbYF7HYswHX1ilswvw6f26I/+gYXy6kzdMSWWO950cqqKa5EE4
+1eg+PwHD26WbrJ2S/zodKB4=
+  "]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Gui and graphics", "Chapter",
+ CellChangeTimes->{{3.6953275614849377`*^9, 3.695327563501627*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "load", " ", "gui", " ", "and", " ", "plotting", " ", "subsystems", " ", 
+    "in", " ", "FrontEnd", " ", 
+    RowBox[{"(", 
+     RowBox[{
+     "hangs", " ", "it", " ", "for", " ", "a", " ", "few", " ", "seconds"}], 
+     ")"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Plot", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", "0", ",", "1"}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6953277972747808`*^9, 3.6953278060021544`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`x$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 0, 1}}, Typeset`size$$ = {7., {0., 8.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`x$26607$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`x$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x$$, $CellContext`x$26607$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 0, 
+      "Specifications" :> {{$CellContext`x$$, 0, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{257., {51., 58.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6953277873728113`*^9, 3.6953283326894894`*^9, 
+  3.695328609493561*^9, 3.6953296831338873`*^9, 3.6953612373174677`*^9, 
+  3.6953719678049183`*^9, 3.6956231879522643`*^9, 3.696524451462446*^9, 
+  3.6967081571851573`*^9, 3.6967732295228696`*^9, 3.697121017367931*^9, 
+  3.697188685881911*^9, 3.697360373742571*^9, 3.6975250881641827`*^9, 
+  3.6975284485537643`*^9, 3.6975559775852594`*^9, 3.6976496141015687`*^9, 
+  3.69780621089939*^9, 3.6984011532150526`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Remote kernels", "Chapter",
+ CellChangeTimes->{{3.6953275528454857`*^9, 3.695327554991577*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"remote", " ", 
+    RowBox[{"kernels", " ", "[", "["}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"LaunchKernels", "[", "]"}], ";"}], 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"local", " ", "ones", " ", "first"}], ",", " ", 
+     RowBox[{
+      RowBox[{"configure", " ", "via", " ", "gui"}], " ", "=", " ", 
+      RowBox[{"amount", " ", "of", " ", "logical", " ", "processors"}]}]}], 
+    "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Needs", "[", "\"\<SubKernels`RemoteKernels`\>\"", "]"}], "\n", 
+   RowBox[{"Get", "@", "\"\<tunnel.m\>\""}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Read", ":", " ", "\[IndentingNewLine]", "https", ":"}], "//", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"github", ".", "com"}], "/", "sakra"}], "/", "Tunnel"}], 
+          "/", "blob"}], "/", "master"}], "/", 
+        RowBox[{"MANUAL", ".", "md"}]}], "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", "get", " ", "putty", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"installed", "!"}], " ", "the", " ", "script", " ", 
+         "expects", " ", "it", " ", "somewhere"}], ")"}], " ", "and", " ", 
+       "Bitvise", " ", "SSH", " ", "server", "\[IndentingNewLine]", "make", 
+       " ", "a", " ", "virtual", " ", "account", " ", "on", " ", "the", " ", 
+       "Command", " ", "Prompt", " ", "shell"}]}], ",", " ", 
+     RowBox[{
+     "allowing", " ", "opening", " ", "of", " ", "ports", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", "make", " ", "sure", " ", 
+      "firewall", " ", "is", " ", "disabled", " ", "on", " ", "this", " ", 
+      "network", " ", 
+      RowBox[{"(", "?", ")"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      "make", " ", "sure", " ", "remote", " ", "computer", " ", "is", " ", 
+      "running", " ", "and", " ", "its", " ", "ssh", " ", "server", " ", 
+      "too", "\[IndentingNewLine]", "\[IndentingNewLine]", "ignore", " ", 
+      "the", " ", "empty", " ", "commandline", " ", "windows", " ", "this", 
+      " ", "opens", "\[IndentingNewLine]", "\[IndentingNewLine]", "see", " ", 
+      RowBox[{"$UserBaseDirectory", "\\", "FrontEnd", "\\", "Logs"}]}]}], 
+    "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ComputerName", "[", "]"}], "\[Equal]", 
+      "\"\<PAULYOGA2PRO\>\""}], "\[IndentingNewLine]", ",", 
+     RowBox[{"LaunchKernels", "@", 
+      RowBox[{"RemoteMachineTunnel", "[", 
+       RowBox[{"\"\<PaulVirtual:123456@PAULSPC\>\"", ",", "12", ",", 
+        RowBox[{"\"\<OperatingSystem\>\"", "\[Rule]", "\"\<Windows\>\""}]}], 
+       "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+     RowBox[{"(*", "else", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Assert", "[", 
+       RowBox[{
+        RowBox[{"ComputerName", "[", "]"}], "\[Equal]", "\"\<PAULSPC\>\""}], 
+       "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"LaunchKernels", "@", 
+       RowBox[{"RemoteMachineTunnel", "[", 
+        RowBox[{
+        "\"\<PAULYOGA2PROVirtual:123456@PAULYOGA2PRO\>\"", ",", "4", ",", 
+         RowBox[{"\"\<OperatingSystem\>\"", "\[Rule]", "\"\<Windows\>\""}], 
+         ",", 
+         RowBox[{
+         "\"\<KernelPath\>\"", "\[Rule]", 
+          "\"\<E:\\\\Programs\\\\Mathematica \
+11.0\\\\WolframKernel.exe\>\""}]}], "]"}]}]}]}], 
+    RowBox[{"(*", 
+     RowBox[{
+     "note", " ", "the", " ", "nonstandard", " ", "installation", " ", 
+      "path"}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"]", "]"}], " ", "end", " ", "remote", " ", "kernels"}], 
+    "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.695327819919762*^9, 3.6953278622390237`*^9}, {
+  3.69532813371268*^9, 3.695328181655777*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "LinkObject","linkd",
+   "\"Unable to communicate with closed link \
+\\!\\(\\*RowBox[{\\\"LinkObject\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"3493@127.0.0.1,3494@127.0.0.1\\\\\\\"\\\", \\\",\\\", \
+\\\"5279\\\", \\\",\\\", \\\"20\\\"}], \\\"]\\\"}]\\).\"",2,28,3,
+   25724416737863497251,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6953612460658665`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Parallel`Developer`ConnectKernel","failinit",
+   "\"\\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"4\\\"}]\\) \
+kernels failed to initialize.\"",2,28,4,25724416737863497251,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6953612460814915`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"KernelObject\"\>", "[", 
+    RowBox[{"13", ",", "\<\"PAULYOGA2PRO\"\>"}], "]"}], ",", 
+   RowBox[{"\<\"KernelObject\"\>", "[", 
+    RowBox[{"14", ",", "\<\"PAULYOGA2PRO\"\>"}], "]"}], ",", 
+   RowBox[{"\<\"KernelObject\"\>", "[", 
+    RowBox[{"16", ",", "\<\"PAULYOGA2PRO\"\>"}], "]"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.695327847241006*^9, 3.6953280720302334`*^9, 
+  3.695328355719035*^9, 3.6953286910109634`*^9, 3.695328748016531*^9, 
+  3.695329695547512*^9, 3.695361246206497*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Kernels", "[", "]"}], "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.695327877745678*^9, 3.695327880493116*^9}}],
+
+Cell[BoxData["15"], "Output",
+ CellChangeTimes->{3.6953278807281837`*^9, 3.6953283557840447`*^9, 
+  3.695328694231511*^9, 3.695328756104672*^9, 3.69532969559439*^9, 
+  3.695361246269*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ParallelEvaluate", "@", "$KernelID"}]], "Input",
+ CellChangeTimes->{{3.695327902550207*^9, 3.695327905991866*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+   ",", "9", ",", "10", ",", "11", ",", "12", ",", "13", ",", "14", ",", 
+   "16"}], "}"}]], "Output",
+ CellChangeTimes->{3.6953279063175306`*^9, 3.6953283560859327`*^9, 
+  3.695328694262763*^9, 3.695328756245302*^9, 3.695329695656892*^9, 
+  3.695361246347128*^9}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{784, 677},
-WindowMargins->{{Automatic, 326}, {2, Automatic}},
+WindowSize->{753, 709},
+WindowMargins->{{508, Automatic}, {71, Automatic}},
+WindowStatusArea->"init2.nb last backed up to init2.nb~.nb on Mon 13 Mar 2017 \
+at 2:38:09 PM",
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -233,16 +550,42 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 106, 1, 101, "Title"],
+Cell[580, 22, 106, 1, 90, "Title"],
 Cell[689, 25, 132, 1, 30, "Text"],
 Cell[824, 28, 158, 3, 30, "Text"],
 Cell[985, 33, 135, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1145, 38, 5212, 127, 772, "Input",
+Cell[1145, 38, 5853, 134, 791, "Input",
  InitializationCell->False],
-Cell[6360, 167, 912, 15, 41, "Message"],
-Cell[7275, 184, 836, 15, 41, "Message"],
-Cell[8114, 201, 764, 13, 41, "Message"]
+Cell[7001, 174, 1108, 22, 22, "Message"],
+Cell[8112, 198, 1026, 20, 22, "Message"],
+Cell[9141, 220, 1231, 23, 41, "Message"],
+Cell[10375, 245, 1192, 23, 59, "Message"],
+Cell[11570, 270, 1085, 21, 41, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12692, 296, 103, 1, 64, "Chapter"],
+Cell[CellGroupData[{
+Cell[12820, 301, 945, 27, 107, "Input"],
+Cell[13768, 330, 1959, 38, 126, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15776, 374, 101, 1, 64, "Chapter"],
+Cell[CellGroupData[{
+Cell[15902, 379, 4015, 87, 677, "Input"],
+Cell[19920, 468, 410, 9, 22, "Message"],
+Cell[20333, 479, 308, 6, 22, "Message"],
+Cell[20644, 487, 546, 11, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21227, 503, 150, 3, 30, "Input"],
+Cell[21380, 508, 187, 3, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21604, 516, 138, 2, 30, "Input"],
+Cell[21745, 520, 382, 8, 30, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
