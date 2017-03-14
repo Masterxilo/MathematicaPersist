@@ -80,10 +80,13 @@ in init.m
 DepersistHeldDef[name_String] := LoadExpression["def"<>name];
 DepersistCell[name_String] := LoadExpression["cell"<>name];
 
+SavedExpressionsTotalOrderAdd[name_String] := Global`AppendLineToFileIfNotPresent[FindFile@"SavedExpressionsTotalOrder.txt", name];
+
 Persist~SetAttributes~HoldRest;
 Persist[n_String /; StringLength@n > 0, x_] :=
     With[{cell = EvaluatingCell[]},
     SaveExpression["cell" <> n, cell]; (* TODO should Cells be held, can they have evaluating variables? Well inside ToBoxes yes but otherwise?*)
+    SavedExpressionsTotalOrderAdd[n];
     PersistDef[n, x] (*do not suppress this output: we want to see the result of PTest, for example *)
 ];
 Persist[ns_Symbol, x_] :=  {n=(*FullSymbolName@*)ToString@Unevaluated@ns}~With~Persist[n,x]

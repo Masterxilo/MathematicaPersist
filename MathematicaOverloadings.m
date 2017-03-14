@@ -199,6 +199,12 @@ Unprotect@FileNameTake;
 FileNameTake[n_Integer] := FileNameTake[#, n] &;
 Protect@FileNameTake;
 
+(* -- Extend KeyMap --*)
+(*make it work for lists of rules like many functions operating on associations*)
+Unprotect[KeyMap];
+KeyMap[f_,r:{___Rule}] := Normal@KeyMap[f,Association@r];
+Protect[KeyMap];
+
 (* -- Extend Assert --*)
 Unprotect@Assert;
 
@@ -355,3 +361,13 @@ f[]
 *)
 (* -- End Extend OptionValue --*)
 
+
+
+(* --- ImageMultiply with scalar first --- *)
+Unprotect@ImageMultiply;
+ImageMultiply[x_?NumericQ, i_Image] := ImageMultiply[i, x];
+
+ClearAttributes[ImageMultiply, ReadProtected];
+DownValues@ImageMultiply = Reverse@DownValues@ImageMultiply; (*fix a bug with the existing down value*)
+SetAttributes[ImageMultiply, ReadProtected];
+Protect@ImageMultiply;
